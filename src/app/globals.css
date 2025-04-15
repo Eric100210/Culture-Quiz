@@ -33,6 +33,15 @@ body {
   transition: font-size 0.15s ease-in-out;
 }
 
+.header h1 {
+  font-size: 2.5rem;
+  color: #7894b1;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
 .header:hover {
   font-size: 1.12em; /* Augmente la taille du texte */
 }
@@ -271,4 +280,40 @@ body {
 
 .retour:hover {
   transform: scale(1.15);
+}
+
+.box-quiz {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: #dcf0f8;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  margin-bottom: 2rem;
+  padding-bottom: 3rem;
+  min-height: 60vh;
+}
+
+/* Quiz container (spécifique à la question et à la réponse) */
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 700px;  /* Limite la largeur */
+  text-align: center;
+  margin-top: 2rem; /* Espace entre la box-quiz et le quiz-container */
+}
+
+/* Question styling */
+.quiz-container h2 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
 }

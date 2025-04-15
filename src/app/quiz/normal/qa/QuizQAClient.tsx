@@ -28,7 +28,6 @@ export default function QuizQAClient({ questions }: { questions: Question[] }) {
       )}
 
       <button onClick={next}>Question suivante</button>
-      <Link href="/quiz/normal">Retour</Link>
     </main>
   );
 }

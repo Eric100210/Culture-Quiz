@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 type Question = {
   question: string;
@@ -9,6 +9,7 @@ type Question = {
 };
 
 export default function QuizThematiqueClient({ questions }: { questions: Question[] }) {
+  const router = useRouter();
   const [index, setIndex] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
 
@@ -19,16 +20,26 @@ export default function QuizThematiqueClient({ questions }: { questions: Questio
 
   return (
     <main style={{ padding: "2rem" }}>
-      <h2>{questions[index].question}</h2>
+      <div className="header">
+        <h1>Quiz thématique</h1>
+      </div>
+      <div className="box-quiz">
+        <div className="quiz-container">
+          <h2>{questions[index].question}</h2>
 
-      {showAnswer ? (
-        <p><strong>{questions[index].answer}</strong></p>
-      ) : (
-        <button onClick={() => setShowAnswer(true)}>Afficher la réponse</button>
-      )}
+          {showAnswer ? (
+            <p><strong>{questions[index].answer}</strong></p>
+          ) : (
+            <button onClick={() => setShowAnswer(true)}>Afficher la réponse</button>
+          )}
 
-      <button onClick={next}>Question suivante</button>
-      <Link href="/quiz/normal">Retour</Link>
+          <button onClick={next}>Question suivante</button>
+          
+        </div>
+      </div>
+      <div>
+        <button className="retour" onClick={() => router.push("/quiz/normal")}> Retour </button>
+      </div>
     </main>
   );
 }
