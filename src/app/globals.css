@@ -25,7 +25,9 @@ body {
 
 .header {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   padding-bottom: 20px;
   width: 100%;
   background-color: rgb(60, 60, 106);
@@ -40,6 +42,13 @@ body {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #7894b1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .header:hover {
