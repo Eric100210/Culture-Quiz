@@ -4,6 +4,10 @@ import path from "path";
 
 export type Question = {
   question: string;
+  answer1: string;
+  answer2: string;
+  answer3: string;
+  answer4: string;
   answer: string;
 };
 
@@ -12,10 +16,14 @@ export function loadQuestionsQA(): Question[] {
   const raw = fs.readFileSync(filePath, "utf-8");
 
   return raw.split("\n").map((line) => {
-    const [question, answer] = line.split(" ; ");
+    const [question, answer1, answer2, answer3, answer4, answer] = line.split(" ; ");
     return {
       question: question.trim(),
-      answer: answer.trim().slice(0,-1),
+      answer1: answer1.trim(),
+      answer2: answer2.trim(),
+      answer3: answer3.trim(),
+      answer4: answer4.trim(),
+      answer: answer.trim(),
     };
   });
 }

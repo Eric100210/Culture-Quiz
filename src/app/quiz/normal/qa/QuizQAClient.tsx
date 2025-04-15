@@ -5,6 +5,10 @@ import { useRouter } from "next/navigation";
 
 type Question = {
   question: string;
+  answer1: string;
+  answer2: string;
+  answer3: string;
+  answer4: string;
   answer: string;
 };
 
@@ -29,7 +33,7 @@ export default function QuizThematiqueClient({ questions }: { questions: Questio
           <h2 className="quiz-question">{questions[index].question}</h2>
 
           {showAnswer ? (
-            <p><strong>{questions[index].answer}</strong></p>
+            <p><strong>{questions[index].answer1}{questions[index].answer}</strong></p>
           ) : (
             
             <button className="quiz-buttons answer" onClick={() => setShowAnswer(true)}>Afficher la réponse</button>

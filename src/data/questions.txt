@@ -1,51 +1,45 @@
-Comment appelle-t-on un poème dont les premières lettres de chaque vers forment un mot ? ; Acrostiche.
-Quel est le principal pays producteur de kiwis ? ; Chine.
-Comment s'appelle l'arbuste sur lequel pousse le kiwi ? ; Actinidier.
-Comment s’appellent les frais bancaires liés à un découvert ? ; Agios.
-Quel homme a fondé Al-Qaïda ? ; Ben Laden.
-Dans quelle ville française Léonard de Vinci est-il mort ? ; Amboise.
-Sur quel mont Moïse a-t-il reçu les instructions pour construire l’arche d’alliance ? ; Sinaï.
-Dans quelle constellation se situe l’apex vers lequel se dirige le système solaire ? ; Hercule.
-En quelle année l'arrêt Bosman a-t-il été rendu ? ; 1995.
-Qui est l’auteur du traité *L’art de la guerre* ? ; Sun Tzu.
-Quelle était la capitale de l’Assyrie ? ; Ninive.
-Comment appelle-t-on une attaque visant à saturer un serveur avec de nombreuses requêtes ? ; DDOS.
-Quelle molécule hallucinogène est présente dans l’ayahuasca ? ; DMT.
-Quel roi babylonien a détruit le Temple de Salomon ? ; Nabuchodonosor.
-De quoi est constitué le ballast ferroviaire ? ; Pierres.
-En quelle année a eu lieu la bataille d’Hernani ? ; 1830.
-Quel métal extrait-on principalement de la bauxite ? ; Aluminium.
-Quel compositeur romantique a écrit *La Damnation de Faust* ? ; Berlioz.
-Quel roi a envoyé ses troupes pour tuer la Bête du Gévaudan ? ; Louis XV.
-En quelle matière sont faits les billets en euros ? ; Coton.
-Quel est le terme utilisé pour désigner la méthode de dissimulation de l'origine d'argent ? ; Blanchiment d'argent.
-Quel groupe djihadiste seme la terreur au Nigéria ? ; Boko Haram.
-Quelle est la contenance d'une bouteille de vin Jéroboam ? ; 3 L.
-Quelle est la contenance d'une bouteille de vin Réhoboam ? ; 4,5 L.
-Quelle est la contenance d'une bouteille de vin Mathusalem ? ; 6 L.
-Quel jour du mois, chez les Romains, s'appelait 'les calendes' ? ; Le premier jour du mois.
-En quelle année le canal de Panama a-t-il été achevé ? ; 1914.
-En quelle année le canal de Suez a-t-il été inauguré ? ; 1869.
-Combien de carats contient l'or pur ? ; 24 carats.
-Combien pèse un carat pour un diamant ? ; 0.20 gramme.
-Qui a inventé la carte à puce ? ; Roland Moreno.
-Combien de caudalies correspond à 30 secondes d'arômes en bouche ? ; 30 caudalies.
-En quelle année le port de la ceinture est-il devenu obligatoire à l’avant des véhicules en France ? ; 1970.
-Quel roi babylonien a fait rédiger le code d'Hammurabi ? ; Hammurabi.
-En quelle année la CGT a-t-elle été fondée ? ; 1895.
-Quel est le fleuve le plus long de Chine ? ; Yangtsé.
-Quelle guerre a marqué la création de l'État d'Israël en 1948 ? ; La première guerre israélo-arabe.
-Quelle est la devise de l’Union européenne ? ; In varietate concordia.
-Qui a écrit 'L’Énéide' ? ; Virgile.
-Quelle organisation de financement a été créée en 1958 et se concentre sur l’énergie nucléaire ? ; Euratom.
-Quel jour est célébrée la fête de l'Europe ? ; 9 mai
-Combien de fleuves des Enfers existent dans la mythologie grecque ? ; Cinq fleuves.
-Quel est le nom de l’acteur et musicien anglais célèbre pour 'Space Oddity' ? ; David Bowie.
-Quel est le plus grand désert du monde ? ; L'Antarctique.
-Quel groupe islamiste a rompu avec Al-Qaïda en 2013 ? ; Daesh.
-Quel est le pays traversé par les fleuves Yangtsé et Fleuve Jaune ? ; La Chine.
-Quel a été l'impact du Code d'Hammurabi sur la civilisation ? ; Il a posé les bases de la loi babylonienne.
-En quelle année a eu lieu l'élection présidentielle française au suffrage universel ? ; 1962.
-Comment appelle-t-on les généraux qui se sont partagés l'empire d'Alexandre le Grand après sa mort ? ; Les diadoques.
-En quelle année a eu lieu la création du Front National ? ; 1972.
-Qui est le fondateur de la Croix-Rouge ? ; Henri Dunant.
+Comment appelle-t-on un poème dont les premières lettres de chaque vers forment un mot ? ; Anagramme ; Acrostiche ; Charade ; Palindrome ; Acrostiche
+Quel est le principal pays producteur de kiwis ? ; Argentine ; Chili ; Chine ; Japon ; Chine
+Comment s'appelle l'arbuste sur lequel pousse le kiwi ? ; Actinidier ; Troène ; Asiminier ; Feijoa ; Actinidier
+Comment s’appellent les frais bancaires liés à un découvert ? ; Agios ; Commissions ; Frais de gestion ; Intérêts ; Agios
+Quel homme a fondé Al-Qaïda ? ; Oussama Ben Laden ; Saddam Hussein ; Ayman al-Zawahiri ; Abu Bakr al-Baghdadi ; Oussama Ben Laden
+Dans quelle ville française Léonard de Vinci est-il mort ? ; Amboise ; Mantoue ; Florence ; Venise ; Amboise
+Sur quel mont Moïse a-t-il reçu les instructions pour construire l’arche d’alliance ? ; Sinaï ; Olivier ; Ararat ; Nebo ; Sinaï
+Dans quelle constellation se situe l’apex vers lequel se dirige le système solaire ? ; Hercule ; Bouvier ; Orion ; Taureau ; Hercule
+En quelle année l'arrêt Bosman a-t-il été rendu ? ; 1995 ; 1990 ; 1985 ; 1980 ; 1995
+Qui est l’auteur du traité *L’art de la guerre* ? ; Sun Tzu ; Maquiavel ; Montesquieu ; Clausewitz ; Sun Tzu
+Quelle était la capitale de l’Assyrie ? ; Ninive ; Babylone ; Ur ; Lagash ; Ninive
+Comment appelle-t-on une attaque visant à saturer un serveur avec de nombreuses requêtes ? ; DDOS ; Brute Force ; Phishing ; Ransomware ; DDOS
+Quelle molécule hallucinogène est présente dans l’ayahuasca ? ; DMT ; PSV ; LSD ; Psylocibine ; DMT
+Quel roi babylonien a détruit le Temple de Salomon ? ; Nabuchodonosor ; Hammurabi ; Cyrus ; Nebucadnetsar ; Nabuchodonosor
+De quoi est constitué le ballast ferroviaire ? ; Pierres ; Sable ; Terre ; Graviers ; Pierres
+En quelle année a eu lieu la bataille d’Hernani ? ; 1830 ; 1845 ; 1855 ; 1870 ; 1830
+Quel métal extrait-on principalement de la bauxite ? ; Aluminium ; Lithium ; Zinc ; Cuivre ; Aluminium
+Quel compositeur romantique a écrit *La Damnation de Faust* ? ; Berlioz ; Wagner ; Verdi ; Saint-Saëns ; Berlioz
+Quel roi a envoyé ses troupes pour tuer la Bête du Gévaudan ? ; Louis XV ; Louis XIV ; Louis XVI ; Louis XIII ; Louis XV
+En quelle matière sont faits les billets en euros ? ; Coton ; Plastique ; Papier ; Fibres synthétiques ; Coton
+Quel groupe djihadiste seme la terreur au Nigéria ? ; Boko Haram ; Daesh ; Al-Shabaab ; Al-Qaïda ; Boko Haram
+Quelle est la contenance d'une bouteille de vin Jéroboam ? ; 3 L ; 4,5L ; 6L ; 9L ; 3L
+Quelle est la contenance d'une bouteille de vin Réhoboam ? ; 4,5 L ; 6L ; 9L ; 12L ; 4,5L
+Quelle est la contenance d'une bouteille de vin Mathusalem ? ; 6 L ; 9L ; 4,5L ; 12L ; 6L
+Quel jour du mois, chez les Romains, s'appelait 'les calendes' ? ; Le premier jour du mois ; Le dernier jour du mois ; le quinzième jour ; le dixième jour ; Le premier jour du mois
+En quelle année le canal de Panama a-t-il été achevé ? ; 1914 ; 1905 ; 1901 ; 1894 ; 1914
+En quelle année le canal de Suez a-t-il été inauguré ? ; 1869 ; 1879 ; 1859 ; 1889 ; 1869
+Combien de carats contient l'or pur ? ; 24 carats ; 18 carats ; 20 carats ; 22 carats ; 24 carats
+Combien pèse un carat pour un diamant ? ; 0.20 gramme ; 0.50 gramme ; 0.80 gramme ; 1.20 gramme ; 0.20 gramme
+Qui a inventé la carte à puce ? ; Roland Moreno ; Tedd Hoff ; Tim Berners-Lee ; Bill Gates ; Roland Moreno
+En quelle année le port de la ceinture est-il devenu obligatoire à l’avant des véhicules en France ? ; 1970 ; 1960 ; 1965 ; 1955 ; 1970
+En quelle année la CGT a-t-elle été fondée ? ; 1895 ; 1901 ; 1904 ; 1891 ; 1895
+Quel est le fleuve le plus long de Chine ? ; Yangtsé ; Le fleuve jaune ; le Tigre ; l'Euphrate ; Yangtsé
+Quelle est la devise de l’Union européenne ? ; In varietate concordia ; E pluribus unum ; Unité dans la diversité ; In vino veritas ; In varietate concordia
+Qui a écrit 'L’Énéide' ? ; Virgile ; Homère ; Ovide ; Sophocle ; Virgile
+Quelle organisation de financement a été créée en 1958 et se concentre sur l’énergie nucléaire ? ; Euratom ; EDF ; OPEC ; OMC ; Euratom
+Quel jour est célébrée la fête de l'Europe ? ; 9 mai ; 20 juin ; 19 juillet ; 20 août ; 9 mai
+Combien de fleuves des Enfers existent dans la mythologie grecque ? ; Cinq fleuves ; Quatre fleuves ; Trois fleuves ; Six fleuves ; Cinq fleuves
+Quel est le nom de l’acteur et musicien anglais célèbre pour 'Space Oddity' ? ; David Bowie ; Elvis Presley ; John Lennon ; Mick Jagger ; David Bowie
+Quel est le plus grand désert du monde ? ; L'Antarctique ; Désert de Gobi ; Le Sahara ; Le Kalahari ; L'Antarctique
+Quel groupe islamiste a rompu avec Al-Qaïda en 2013 ? ; Daesh ; Boko Haram ; Al-Shabaab ; Le Hamas ; Daesh
+Quel est le pays traversé par les fleuves bleus et jaunes ? ; La Chine ; La Russie ; Le Pakistan ; L'Inde ; La Chine
+Comment appelle-t-on les généraux qui se sont partagés l'empire d'Alexandre le Grand après sa mort ? ; Les diadoques ; Les stratèges ; Les satrapes ; Les phalanges ; Les diadoques
+En quelle année a eu lieu la création du Front National ? ; 1972 ; 1965 ; 1978 ; 1982 ; 1972
+Qui est le fondateur de la Croix-Rouge ? ; Henri Dunant ; Albert Schweitzer ; Florence Nightingale ; Clara Barton ; Henri Dunant
