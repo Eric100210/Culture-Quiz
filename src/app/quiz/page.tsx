@@ -38,6 +38,9 @@ export default function QuizModeSelector() {
           <p>Continue tant que tu réponds juste</p>
         </div>
       </div>
+      <div>
+      <button className="retour" onClick={() => router.push("/")}> Retour </button>
+      </div>
     </main>
   );
 }

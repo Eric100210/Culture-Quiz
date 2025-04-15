@@ -80,6 +80,7 @@ body {
 .button-login {
   border: 1px solid gray;
   width: 100%;
+  height: 100%;
   padding: 1rem;
   border-radius: 8px;
   cursor: pointer;
@@ -89,6 +90,7 @@ body {
 .button-signup {
   border: 1px solid gray;
   width: 100%;
+  height: 100%;
   padding: 1rem;
   border-radius: 8px;
   cursor: pointer;
@@ -114,6 +116,7 @@ body {
 .playing-guest {
   border: 1px solid gray;
   width: 100%;
+  height: 100%;
   padding: 1rem;
   border-radius: 8px;
   cursor: pointer;
@@ -249,4 +252,23 @@ body {
 
 .qa:hover {
   background-color: #f4c1ee;
+}
+
+.retour {
+  position: fixed;
+  top: 44px;
+  left: 44px;
+  background-color: #f9f6f6;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  padding: 10px;
+  border: 1px solid #ccc;
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.retour:hover {
+  transform: scale(1.15);
 }

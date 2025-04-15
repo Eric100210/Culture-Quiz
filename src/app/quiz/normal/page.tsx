@@ -25,6 +25,9 @@ export default function QuizNormal() {
           <p>Réponds spécifiquement aux questions posées</p>
         </div>
       </div>
+      <div>
+        <button className="retour" onClick={() => router.push("/quiz")}> Retour </button>
+      </div>
     </main>
   );
 }
