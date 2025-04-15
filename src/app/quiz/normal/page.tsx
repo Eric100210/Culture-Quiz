@@ -9,13 +9,6 @@ export default function QuizNormal() {
       <h1>Quiz Classique : choisis ton type de questions</h1>
       </div>
       <div style={{ display: "grid", gap: "1rem", marginTop: "2rem" }}>
-        <div
-          onClick={() => router.push("/quiz/normal/thematique")}
-          className="quiz-button thematique"
-        >
-          <h2>🎯 Quiz Thématique </h2>
-          <p>Parle sur des sujets vastes</p>
-        </div>
 
         <div
           onClick={() => router.push("/quiz/normal/qa")}
@@ -24,6 +17,15 @@ export default function QuizNormal() {
           <h2>⚡ Quiz Questions/Réponses</h2>
           <p>Réponds spécifiquement aux questions posées</p>
         </div>
+
+        <div
+          onClick={() => router.push("/quiz/normal/thematique")}
+          className="quiz-button thematique"
+        >
+          <h2>🎯 Quiz Thématique </h2>
+          <p>Parle sur des sujets vastes</p>
+        </div>
+        
       </div>
       <div>
         <button className="retour" onClick={() => router.push("/quiz")}> Retour </button>
