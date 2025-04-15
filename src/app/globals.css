@@ -78,29 +78,25 @@ body {
 
 
 .button-login {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
+  border: 1px solid gray;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
   cursor: pointer;
+  background-color: #bffbd4;
 }
 
 .button-signup {
-  background-color: #28a745;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 10px;
+  border: 1px solid gray;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
   cursor: pointer;
+  background-color: #b3d7ff;
 }
 
 .button-login:hover {
-  background-color: #0056b3;
-}
-
-.button-login:active {
-  background-color: #0042a2;
+  background-color: #9df5ca;
 }
 
 .button-login:focus {
@@ -108,11 +104,7 @@ body {
 }
 
 .button-signup:hover {
-  background-color: #107032;
-}
-
-.button-signup:active {
-  background-color: #0042a2;
+  background-color: #99c2f1;
 }
 
 .button-signup:focus {
