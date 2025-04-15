@@ -23,7 +23,7 @@ export default function QuizThematiqueClient({ questions }: { questions: Questio
       <div className="header">
         <h1>Quiz thématique</h1>
       </div>
-      <div className="box-quiz">
+      <div className="back-quiz">
         <div className="quiz-container">
           <h2>{questions[index].question}</h2>
 

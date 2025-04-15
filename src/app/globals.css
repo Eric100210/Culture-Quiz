@@ -282,7 +282,7 @@ body {
   transform: scale(1.15);
 }
 
-.box-quiz {
+.back-quiz {
   width: 100%;
   display: flex;
   justify-content: center;
