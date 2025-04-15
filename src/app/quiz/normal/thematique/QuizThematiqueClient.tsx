@@ -10,11 +10,12 @@ type Question = {
 
 export default function QuizThematiqueClient({ questions }: { questions: Question[] }) {
   const router = useRouter();
-  const [index, setIndex] = useState(0);
+  const [index, setIndex] = useState(Math.floor(Math.random() * questions.length));
   const [showAnswer, setShowAnswer] = useState(false);
 
   const next = () => {
-    setIndex(i => (i + 1 < questions.length ? i + 1 : 0));
+    const randomIndex = Math.floor(Math.random() * questions.length);
+    setIndex(randomIndex);
     setShowAnswer(false);
   };
 
