@@ -1,8 +1,8 @@
 // src/app/quiz/page.tsx
-import { loadQuestions } from "@/lib/loadQuestions";
+import { loadQuestionsQA } from "@/lib/loadQuestionsQA";
 import QuizEnduranceClient from "./QuizEnduranceClient";
 
 export default function QuizEndurancePage() {
-  const questions = loadQuestions(); // lecture via fs
+  const questions = loadQuestionsQA(); // lecture via fs
   return <QuizEnduranceClient questions={questions} />;
 }

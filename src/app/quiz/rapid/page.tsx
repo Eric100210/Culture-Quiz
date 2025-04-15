@@ -1,7 +1,7 @@
-import { loadQuestions } from "@/lib/loadQuestions";
+import { loadQuestionsQA } from "@/lib/loadQuestionsQA";
 import QuizRapidClient from "./QuizRapidClient";
 
 export default function QuizRapidPage() {
-  const questions = loadQuestions(); // lecture via fs
+  const questions = loadQuestionsQA(); // lecture via fs
   return <QuizRapidClient questions={questions} />;
 }

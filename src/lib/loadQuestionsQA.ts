@@ -15,7 +15,7 @@ export function loadQuestionsQA(): Question[] {
     const [question, answer] = line.split(" ; ");
     return {
       question: question.trim(),
-      answer: answer.trim(),
+      answer: answer.trim().slice(0,-1),
     };
   });
 }
