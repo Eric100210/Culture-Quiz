@@ -1,0 +1,247 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+.mainPage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.secondaryPage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.welcome {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  width: 100%;
+  background-color: rgb(60, 60, 106);
+  color: white;
+  transition: font-size 0.15s ease-in-out;
+}
+
+.header:hover {
+  font-size: 1.12em; /* Augmente la taille du texte */
+}
+
+.under-header {
+  display: flex;
+  justify-content: center;
+  padding: 7px;
+  width: 100%;
+  background-color: rgb(106, 106, 153);
+  color: white;
+  transition: font-size 0.15s ease-in-out;
+}
+
+.under-header:hover {
+  font-size: 1.12em; /* Augmente la taille du texte */
+}
+
+.ListMenu {
+  border-bottom: #333;
+  display: flex;
+  flex-direction: column;
+  padding: 7px;
+  width: 100%;
+  color: white;
+  transition: font-size 0.15s ease-in-out;
+}
+
+.point {
+  transition: font-size 0.15s ease-in-out;
+  padding: 12px;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  border-bottom: 1px solid black; /* Séparateur */
+  text-decoration: none; /* Supprime le soulignement des liens */
+  color: black; 
+}
+
+.point:hover {
+  font-size: 1.15em; /* Augmente la taille du texte */
+}
+
+
+.button-login {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button-signup {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.button-login:hover {
+  background-color: #0056b3;
+}
+
+.button-login:active {
+  background-color: #0042a2;
+}
+
+.button-login:focus {
+  outline: none;
+}
+
+.button-signup:hover {
+  background-color: #107032;
+}
+
+.button-signup:active {
+  background-color: #0042a2;
+}
+
+.button-signup:focus {
+  outline: none;
+}
+
+.button-accueil {
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: font-size 0.15s ease-in-out;
+}
+
+.button-accueil:hover {
+  font-size: 1.12em;
+}
+
+.space {
+  margin-top: 20px;
+}
+
+.menu-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 100%;
+  cursor: pointer;
+  z-index: 1000;
+  transition: font-size 0.15s ease-in-out;
+}
+
+.menu-button:hover {
+  font-size: 1.12em;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100%;
+  background-color: white;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu.open {
+  transform: translateX(0);
+}
+
+.menu h2 {
+  margin-top: 0;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  margin: 15px 0;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+.quiz-button {
+  border: 1px solid gray;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.quiz-button:hover {
+  transform: scale(1.02);
+}
+
+.classic {
+  background-color: #fff3cd;
+}
+
+.classic:hover {
+  background-color: #f9e7af;
+}
+
+.rapid {
+  background-color: #ffe6e6;
+}
+
+.rapid:hover {
+  background-color: #f4ccd0;
+}
+
+.endurance {
+  background-color: #e6ffe6;
+}
+
+.endurance:hover {
+  background-color: #d4edda;
+}
+
+.thematique {
+  background-color: #e6ebff;
+}
+
+.thematique:hover {
+  background-color: #badfff;
+}
+
+.qa {
+  background-color: #ffe2fe;
+}
+
+.qa:hover {
+  background-color: #f4c1ee;
+}
