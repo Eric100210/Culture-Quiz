@@ -96,7 +96,7 @@ body {
 }
 
 .button-login:hover {
-  background-color: #9df5ca;
+  background-color: #97f6c8;
 }
 
 .button-login:focus {
@@ -109,6 +109,19 @@ body {
 
 .button-signup:focus {
   outline: none;
+}
+
+.playing-guest {
+  border: 1px solid gray;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ffd1b3;
+}
+
+.playing-guest:hover {
+  background-color: #f6c486;
 }
 
 .button-accueil {

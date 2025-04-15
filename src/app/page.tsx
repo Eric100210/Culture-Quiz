@@ -1,4 +1,8 @@
+"use client"
+import { useRouter } from "next/navigation";
+
 export default function Home() {
+  const router=useRouter();
   return (
     <main className="mainPage">
       <div className="header">
@@ -13,6 +17,9 @@ export default function Home() {
       </div>
       <div className="space">
           <button className="button-signup">S'inscrire</button>
+      </div>
+      <div className="space">
+        <button className="playing-guest" onClick={() => router.push("/quiz")}>Jouer en tant qu'invité</button>
       </div>
       </div>
     </main>
