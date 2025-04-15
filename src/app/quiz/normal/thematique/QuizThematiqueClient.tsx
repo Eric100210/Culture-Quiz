@@ -26,17 +26,17 @@ export default function QuizThematiqueClient({ questions }: { questions: Questio
       </div>
       <div className="back-quiz">
         <div className="quiz-container">
-          <h2>{questions[index].question}</h2>
+          <h2 className="quiz-question">{questions[index].question}</h2>
 
           {showAnswer ? (
             <p><strong>{questions[index].answer}</strong></p>
           ) : (
             
-            <button className="quiz-buttons" onClick={() => setShowAnswer(true)}>Afficher la réponse</button>
+            <button className="quiz-buttons answer" onClick={() => setShowAnswer(true)}>Afficher la réponse</button>
             
           )}
           
-          <button className="quiz-buttons" onClick={next}>Question suivante</button>
+          <button className="quiz-buttons next" onClick={next}>Question suivante</button>
           
         </div>
       </div>

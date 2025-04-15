@@ -310,6 +310,7 @@ body {
   max-width: 700px;  /* Limite la largeur */
   text-align: center;
   margin-top: 2rem; /* Espace entre la box-quiz et le quiz-container */
+  padding-bottom: 3rem;
 }
 
 /* Question styling */
@@ -321,7 +322,6 @@ body {
 }
 
 .quiz-buttons {
-  background-color: #4b6b8e;
   color: white;
   border: none;
   padding: 0.8rem 1.5rem;
@@ -332,7 +332,31 @@ body {
   transition: background-color 0.3s, transform 0.3s;
 }
 
-.quiz-buttons:hover {
+.answer {
+  background-color: #4cae4c;
+}
+
+.next {
+  background-color: #4b6b8e;
+}
+
+.next:hover {
   background-color: #3a4a61;
   transform: scale(1.05);
+}
+
+.answer:hover {
+  background-color: #298729;
+  transform: scale(1.05);
+}
+
+.quiz-question {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 1.5rem; /* Espacement supplémentaire en bas de la question */
+  border-bottom: 4px solid #1b51b6; /* Ligne de séparation sous la question */
+  width: 100%;
+  max-width: 500px;
 }
