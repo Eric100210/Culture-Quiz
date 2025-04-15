@@ -94,6 +94,7 @@ body {
   border-radius: 8px;
   cursor: pointer;
   background-color: #bffbd4;
+  font-size: 1.2rem;
 }
 
 .button-signup {
@@ -104,6 +105,7 @@ body {
   border-radius: 8px;
   cursor: pointer;
   background-color: #b3d7ff;
+  font-size: 1.2rem;
 }
 
 .button-login:hover {
@@ -130,6 +132,7 @@ body {
   border-radius: 8px;
   cursor: pointer;
   background-color: #ffd1b3;
+  font-size: 1.2rem;
 }
 
 .playing-guest:hover {
@@ -291,14 +294,13 @@ body {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   margin-bottom: 2rem;
   padding-bottom: 3rem;
-  min-height: 60vh;
+  min-height: 70vh;
 }
 
 /* Quiz container (spécifique à la question et à la réponse) */
 .quiz-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: #fff;
   padding: 2rem;
@@ -316,4 +318,21 @@ body {
   color: #333;
   margin-bottom: 1.5rem;
   font-weight: bold;
+}
+
+.quiz-buttons {
+  background-color: #4b6b8e;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  margin: 0.5rem;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.quiz-buttons:hover {
+  background-color: #3a4a61;
+  transform: scale(1.05);
 }
