@@ -4,6 +4,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
+import '../globals.css';  // Assurez-vous d'avoir un fichier CSS pour cette page
 
 export default function LoginPage() {
   const [email, setEmail] = useState('');
@@ -33,7 +34,7 @@ export default function LoginPage() {
         localStorage.setItem('authToken', data.token);
 
         // Rediriger l'utilisateur après une connexion réussie
-        router.push('/quiz');  // Exemple : rediriger vers le tableau de bord
+        router.push('/quiz');  
       } else {
         // Afficher une erreur si la connexion échoue
         setError(data.message);
@@ -47,15 +48,19 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <div className="bg-white p-8 rounded-lg shadow-md w-96">
-        <h2 className="text-2xl font-bold text-center mb-6">Se connecter</h2>
+    <main className="mainPage">
+    <div className="header">
+          <h1 className="welcome"> Connexion à votre compte</h1>
+      </div>
+    <div className="login-container">
+      <div className="login-box">
+        
 
-        {error && <p className="text-red-500 text-center mb-4">{error}</p>}
+        {error && <p className="error-message">{error}</p>}
 
         <form onSubmit={handleSubmit}>
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+          <div className="input-group">
+            <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
@@ -63,12 +68,11 @@ export default function LoginPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
-              className="w-full p-2 border border-gray-300 rounded-md mt-2"
             />
           </div>
 
-          <div className="mb-6">
-            <label htmlFor="password" className="block text-sm font-medium text-gray-700">Mot de passe</label>
+          <div className="input-group">
+            <label htmlFor="password">Mot de passe</label>
             <input
               type="password"
               id="password"
@@ -76,19 +80,18 @@ export default function LoginPage() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              className="w-full p-2 border border-gray-300 rounded-md mt-2"
             />
           </div>
 
-          <button
-            type="submit"
-            disabled={loading}
-            className={`w-full p-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none ${loading ? 'opacity-50' : ''}`}
-          >
+          <button type="submit" disabled={loading} className="submit-btn">
             {loading ? 'Chargement...' : 'Se connecter'}
           </button>
         </form>
       </div>
     </div>
+    <div>
+      <button className="retour" onClick={() => router.push("/")}> Retour </button>
+      </div>
+    </main>
   );
 }
