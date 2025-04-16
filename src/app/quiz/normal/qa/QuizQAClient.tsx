@@ -45,7 +45,7 @@ export default function QuizThematiqueClient({ questions }: { questions: Questio
   return (
     <main style={{ padding: "2rem" }}>
       <div className="header">
-        <h1>Quiz thématique</h1>
+        <h1>Quiz Classique</h1>
       </div>
       <div className="back-quiz">
         <div className="quiz-container">
@@ -58,11 +58,12 @@ export default function QuizThematiqueClient({ questions }: { questions: Questio
                 selectedAnswer
                   ? isCorrect(ans)
                     ? "correct"
-                    : selectedAnswer === ans
+                    : ans === selectedAnswer
                     ? "incorrect"
                     : ""
                   : ""
               }`}
+              
               onClick={() => handleAnswerClick(ans)}
               disabled={selectedAnswer !== null}
             >
