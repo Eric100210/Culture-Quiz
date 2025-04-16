@@ -13,10 +13,10 @@ export default function Home() {
       </div>
       <div style={{ display: "grid", gap: "0.5rem", marginTop: "1.5rem", width:"500px", height:"200px" }}>
       <div className="space">
-          <button className="button-login">Se connecter</button>
+          <button className="button-login" onClick={() => router.push("/login")}>Se connecter</button>
       </div>
       <div className="space">
-          <button className="button-signup">S'inscrire</button>
+          <button className="button-signup" onClick={() => router.push("/signup")}>S'inscrire</button>
       </div>
       <div className="space">
         <button className="playing-guest" onClick={() => router.push("/quiz")}>Jouer en tant qu'invité</button>
