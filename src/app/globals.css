@@ -524,3 +524,30 @@ body {
   background-color: #c82333;
   transform: scale(1.05);
 }
+
+.stats-button {
+  background-color: #b586e8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.stats-button:hover {
+  background-color: #aa71dc;
+  transform: scale(1.05);
+}
+
+.boutons-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.boutons-profile button {
+  width:200px;
+}

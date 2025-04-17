@@ -75,6 +75,12 @@ export default function ProfilePage() {
           Retour
         </button>
       </div>
+      <div className="boutons-profile">
+      <div>
+        <button className="stats-button" onClick={() => router.push("/stats")}>
+          Statistiques
+        </button>
+      </div>
         <div>
             <button className="deconnexion" onClick={() => {
             localStorage.removeItem('authToken');
@@ -83,6 +89,8 @@ export default function ProfilePage() {
             Déconnexion
             </button>
         </div>
+        </div>
+        
     </main>
   );
 }
