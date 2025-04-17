@@ -70,6 +70,19 @@ export default function ProfilePage() {
           )}
         </div>
       </div>
+      <div>
+        <button className="retour" onClick={() => router.push("/")}>
+          Retour
+        </button>
+      </div>
+        <div>
+            <button className="deconnexion" onClick={() => {
+            localStorage.removeItem('authToken');
+            router.push('/login');
+            }}>
+            Déconnexion
+            </button>
+        </div>
     </main>
   );
 }

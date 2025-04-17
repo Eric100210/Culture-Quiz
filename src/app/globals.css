@@ -508,3 +508,19 @@ body {
   background-color: #cccccc;
   cursor: not-allowed;
 }
+
+.deconnexion {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.deconnexion:hover {
+  background-color: #c82333;
+  transform: scale(1.05);
+}
