@@ -1,27 +1,56 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import jwt from 'jsonwebtoken';
+import { useRouter } from 'next/navigation';
 
-const JWT_SECRET = process.env.NEXT_PUBLIC_JWT_SECRET || 'supersecretkey'; // assure-toi que c'est bien défini
+type UserInfo = {
+  id: number;
+  email: string;
+  username: string;
+};
 
 export default function ProfilePage() {
-  const [user, setUser] = useState<{ email: string; username: string } | null>(null);
+  const [user, setUser] = useState<UserInfo | null>(null);
+  const [loading, setLoading] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
-    const token = localStorage.getItem('authToken');
-    if (token) {
-      try {
-        const decoded: any = jwt.decode(token); // on ne vérifie pas la signature ici, juste décoder
-        if (decoded) {
-          setUser({ email: decoded.email, username: decoded.username });
-        }
-      } catch (err) {
-        console.error('Erreur de décodage du token :', err);
-        setUser(null);
+    const fetchProfile = async () => {
+      const token = localStorage.getItem('authToken');
+
+      if (!token) {
+        router.push('/login');
+        return;
       }
-    }
-  }, []);
+
+      try {
+        const res = await fetch('/api/profile', {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        });
+
+        if (!res.ok) {
+          throw new Error('Non autorisé');
+        }
+
+        const data = await res.json();
+        setUser(data);
+      } catch (error) {
+        console.error('Erreur lors de la récupération du profil:', error);
+        localStorage.removeItem('authToken');
+        router.push('/login');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProfile();
+  }, [router]);
+
+  if (loading) return <p>Chargement du profil...</p>;
+
+  if (!user) return <p>Utilisateur non connecté.</p>;
 
   return (
     <main className="mainPage">
@@ -37,6 +66,7 @@ export default function ProfilePage() {
             </>
           ) : (
             <p>Utilisateur non connecté</p>
+            
           )}
         </div>
       </div>
