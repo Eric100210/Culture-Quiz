@@ -24,7 +24,7 @@ export default function QuizRapideClient({ questions }: { questions: Question[] 
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [shuffledAnswers, setShuffledAnswers] = useState<string[]>([]);
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(60); // 60 secondes
+  const [timeLeft, setTimeLeft] = useState(10); // 60 secondes
   const [isFinished, setIsFinished] = useState(false);
 
   // Shuffle les réponses à chaque nouvelle question
@@ -43,6 +43,36 @@ export default function QuizRapideClient({ questions }: { questions: Question[] 
     const timer = setTimeout(() => setTimeLeft((t) => t - 1), 1000);
     return () => clearTimeout(timer);
   }, [timeLeft, isFinished]);
+
+  useEffect(() => {
+    if (!isFinished) return;
+  
+    const token = localStorage.getItem("authToken");
+    if (!token) return;
+  
+    const updateStats = async () => {
+      try {
+        await fetch("/api/stats", {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            mode: "quick",
+            score: score,
+            goodAnswers: score,
+            badAnswers: wrongCount,
+          }),
+          
+        });
+      } catch (error) {
+        console.error("Erreur mise à jour stats :", error);
+      }
+    };
+  
+    updateStats();
+  }, [isFinished, score]);
 
   function shuffleAnswers(idx: number): string[] {
     const answers = [
@@ -85,36 +115,6 @@ const handleAnswerClick = (answer: string) => {
       </main>
     );
   }
-
-  useEffect(() => {
-    if (!isFinished) return;
-  
-    const token = localStorage.getItem("authToken");
-    if (!token) return;
-  
-    const updateStats = async () => {
-      try {
-        await fetch("/api/stats", {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-          body: JSON.stringify({
-            mode: "quick",
-            score: score,
-            goodAnswers: score,
-            badAnswers: wrongCount,
-          }),
-          
-        });
-      } catch (error) {
-        console.error("Erreur mise à jour stats :", error);
-      }
-    };
-  
-    updateStats();
-  }, [isFinished, score]);
   
 
   return (
@@ -148,7 +148,7 @@ const handleAnswerClick = (answer: string) => {
         </div>
       </div>
       <div>
-        <button className="retour" onClick={() => router.push("/quiz/normal")}>Retour</button>
+        <button className="retour" onClick={() => router.push("/quiz")}>Retour</button>
       </div>
     </main>
   );
