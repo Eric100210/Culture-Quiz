@@ -14,10 +14,13 @@ export default function StatsPage() {
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
+  console.log('router:', router);
 
   useEffect(() => {
+    console.log('Le useEffect est déclenché !');
     const fetchStats = async () => {
       const token = localStorage.getItem('authToken');
+      console.log('Statistiques récupérées:');
 
       if (!token) {
         router.push('/login');
@@ -45,7 +48,7 @@ export default function StatsPage() {
     };
 
     fetchStats();
-  }, [router]);
+  }, []);
 
   if (loading) return <p>Chargement des statistiques...</p>;
 

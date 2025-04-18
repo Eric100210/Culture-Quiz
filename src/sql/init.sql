@@ -1,3 +1,5 @@
+-- remarque : ce fichier ne fonctionne pas : il faut créer les tables directement dans psql
+
 -- Création de la table users
 CREATE TABLE IF NOT EXISTS users (
   id SERIAL PRIMARY KEY,
@@ -12,9 +14,9 @@ CREATE TABLE IF NOT EXISTS users (
 CREATE TABLE IF NOT EXISTS user_stats (
   id SERIAL PRIMARY KEY,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE, -- Référence à l'utilisateur
-  best_quick_quiz_score INTEGER DEFAULT 0,  -- Meilleur score en quiz rapide
-  best_endurance_quiz_score INTEGER DEFAULT 0,  -- Meilleur score en quiz endurance
-  correct_answers INTEGER DEFAULT 0,  -- Nombre de bonnes réponses
+  best_score_quick INTEGER DEFAULT 0,  -- Meilleur score en quiz rapide
+  best_score_endurance INTEGER DEFAULT 0,  -- Meilleur score en quiz endurance
+  good_answers INTEGER DEFAULT 0,  -- Nombre de bonnes réponses
   wrong_answers INTEGER DEFAULT 0,  -- Nombre de mauvaises réponses
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP -- Date de la dernière mise à jour
 );
