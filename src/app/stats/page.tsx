@@ -1,52 +1,85 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
+
+type Stats = {
+  best_score_quick: number;
+  best_score_endurance: number;
+  good_answers: number;
+  bad_answers: number;
+};
 
 export default function StatsPage() {
-  const [stats, setStats] = useState<any>(null);  // Pour stocker les statistiques
-  const [error, setError] = useState<string | null>(null);
+  const [stats, setStats] = useState<Stats | null>(null);
+  const [loading, setLoading] = useState(true);
+  const router = useRouter();
 
   useEffect(() => {
     const fetchStats = async () => {
       const token = localStorage.getItem('authToken');
-      if (!token) return;
+
+      if (!token) {
+        router.push('/login');
+        return;
+      }
 
       try {
-        const response = await fetch('/api/stats', {
-          method:'GET',
+        const res = await fetch('/api/stats', {
           headers: {
-            'Authorization': `Bearer ${token}`,
+            Authorization: `Bearer ${token}`,
           },
         });
 
-        if (response.ok) {
-          const data = await response.json();
-          setStats(data.stats);
-        } else {
-          setError('Erreur lors du chargement des statistiques');
-        }
+        if (!res.ok) throw new Error('Non autorisé');
+
+        const data = await res.json();
+        setStats(data);
       } catch (error) {
-        setError('Erreur de connexion au serveur');
+        console.error('Erreur lors de la récupération des statistiques:', error);
+        localStorage.removeItem('authToken');
+        router.push('/login');
+      } finally {
+        setLoading(false);
       }
     };
 
     fetchStats();
-  }, []);
+  }, [router]);
+
+  if (loading) return <p>Chargement des statistiques...</p>;
+
+  if (!stats) return <p>Erreur lors du chargement des statistiques.</p>;
 
   return (
-    <div className="profile-container">
-      {error && <p className="error-message">{error}</p>}
-      {stats ? (
-        <div className="stats">
-          <h2>Mes Statistiques</h2>
-          <p>Meilleur score en quiz rapide : {stats.best_quick_quiz_score}</p>
-          <p>Meilleur score en quiz endurance : {stats.best_endurance_quiz_score}</p>
-          <p>Bonnes réponses : {stats.correct_answers}</p>
-          <p>Mauvaises réponses : {stats.wrong_answers}</p>
+    <main className="mainPage">
+      <div className="header">
+        <h1 className="welcome">Statistiques du joueur</h1>
+      </div>
+
+      <div className="login-container">
+        <div className="login-box">
+          <p><strong>✅ Bonnes réponses :</strong> {stats.good_answers}</p>
+          <p><strong>❌ Mauvaises réponses :</strong> {stats.bad_answers}</p>
+          <p><strong>🏃 Meilleur score (rapide) :</strong> {stats.best_score_quick}</p>
+          <p><strong>🔥 Meilleur score (endurance) :</strong> {stats.best_score_endurance}</p>
         </div>
-      ) : (
-        <p>Chargement des statistiques...</p>
-      )}
-    </div>
+      </div>
+
+      <div className="boutons-profile">
+        <div>
+          <button className="retour" onClick={() => router.push("/")}>
+            Retour
+          </button>
+        </div>
+        <div>
+          <button className="stats-button" onClick={() => {
+            router.push('/profile');
+          }}>
+            Profil
+          </button>
+        </div>
+      </div>
+    </main>
   );
 }

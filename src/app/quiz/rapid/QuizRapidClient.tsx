@@ -16,8 +16,11 @@ type Question = {
 
 export default function QuizRapideClient({ questions }: { questions: Question[] }) {
   const router = useRouter();
+  if (!questions || questions.length === 0) {
+    return <div>Chargement des questions échoué ou vide.</div>;
+  }  
 
-  const [index, setIndex] = useState(Math.floor(Math.random() * questions.length));
+  const [index, setIndex] = useState(() => Math.floor(Math.random() * questions.length));
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [shuffledAnswers, setShuffledAnswers] = useState<string[]>([]);
   const [score, setScore] = useState(0);
@@ -51,18 +54,23 @@ export default function QuizRapideClient({ questions }: { questions: Question[] 
     return answers.sort(() => Math.random() - 0.5);
   }
 
-  const handleAnswerClick = (answer: string) => {
-    if (selectedAnswer !== null) return;
-    setSelectedAnswer(answer);
-    if (answer === questions[index].answer) {
-      setScore((s) => s + 1);
-    }
-    setTimeout(() => {
-      const nextIndex = Math.floor(Math.random() * questions.length);
-      setIndex(nextIndex);
-      setSelectedAnswer(null);
-    }, 500); // Petite pause entre les questions
-  };
+  const [wrongCount, setWrongCount] = useState(0);
+
+const handleAnswerClick = (answer: string) => {
+  if (selectedAnswer !== null) return;
+  setSelectedAnswer(answer);
+  if (answer === questions[index].answer) {
+    setScore((s) => s + 1);
+  } else {
+    setWrongCount((w) => w + 1);
+  }
+  setTimeout(() => {
+    const nextIndex = Math.floor(Math.random() * questions.length);
+    setIndex(nextIndex);
+    setSelectedAnswer(null);
+  }, 500);
+};
+
 
   const isCorrect = (answer: string) => answer === questions[index].answer;
 
@@ -77,6 +85,37 @@ export default function QuizRapideClient({ questions }: { questions: Question[] 
       </main>
     );
   }
+
+  useEffect(() => {
+    if (!isFinished) return;
+  
+    const token = localStorage.getItem("authToken");
+    if (!token) return;
+  
+    const updateStats = async () => {
+      try {
+        await fetch("/api/stats", {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            mode: "quick",
+            score: score,
+            goodAnswers: score,
+            badAnswers: wrongCount,
+          }),
+          
+        });
+      } catch (error) {
+        console.error("Erreur mise à jour stats :", error);
+      }
+    };
+  
+    updateStats();
+  }, [isFinished, score]);
+  
 
   return (
     <main style={{ padding: "2rem" }}>
