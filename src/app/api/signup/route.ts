@@ -1,5 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
 import pool from '../../../lib/db';  // Importe le pool de connexions
+import bcrypt from 'bcrypt';
+import jwt from 'jsonwebtoken';
+
+const JWT_SECRET = process.env.JWT_SECRET || 'supersecretkey';
 
 export async function POST(req: NextRequest) {
   const { username, email, password } = await req.json();
@@ -16,7 +20,6 @@ export async function POST(req: NextRequest) {
     }
 
     // Chiffre le mot de passe
-    const bcrypt = require('bcrypt');
     const hashedPassword = await bcrypt.hash(password, 10);
 
     // Insère l'utilisateur dans la base de données avec le mot de passe chiffré
@@ -25,9 +28,23 @@ export async function POST(req: NextRequest) {
       [username, email, hashedPassword]
     );
 
-    return NextResponse.json({ message: 'Compte créé avec succès', userId: result.rows[0].id }, { status: 201 });
+    const userId = result.rows[0].id;
+
+    // Initialise les stats de l'utilisateur dans la table user_stats
+    await pool.query(
+      'INSERT INTO user_stats (user_id, best_score_quick, best_score_endurance, good_answers, bad_answers) VALUES ($1, 0, 0, 0, 0)',
+      [userId]
+    );
+
+    // Crée un token JWT
+    const token = jwt.sign({ id: userId, email, username }, JWT_SECRET, { expiresIn: '1h' });
+
+    return NextResponse.json(
+      { message: 'Compte créé avec succès', token },
+      { status: 201 }
+    );
   } catch (error) {
-    console.error(error);
+    console.error('Erreur lors de la création du compte:', error);
     return NextResponse.json({ message: 'Erreur interne du serveur' }, { status: 500 });
   }
 }
