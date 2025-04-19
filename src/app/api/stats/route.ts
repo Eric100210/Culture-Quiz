@@ -30,6 +30,7 @@ export async function GET(req: NextRequest) {
     if (result.rows.length === 0) {
       return NextResponse.json({ message: 'Aucune statistique trouvée' }, { status: 404 });
     }
+    console.log(result.rows[0]);
 
     return NextResponse.json({ stats: result.rows[0] });
   } catch (error) {
@@ -53,7 +54,6 @@ export async function PATCH(req: NextRequest) {
 
     // Si aucune ligne n'existe, on en crée une
     if (current.rows.length === 0) {
-        console.log('Création de nouvelles statistiques pour l\'utilisateur');
       await pool.query(
         `INSERT INTO user_stats (user_id, best_score_quick, best_score_endurance, good_answers, bad_answers)
          VALUES ($1, $2, $3, $4, $5)`,
@@ -66,7 +66,6 @@ export async function PATCH(req: NextRequest) {
         ]
       );
     } else {
-        console.log('Ajout de  staistiques pour l\'utilisateur');
       const stats = current.rows[0];
 
       let newBestQuick = stats.best_score_quick;
@@ -86,7 +85,7 @@ export async function PATCH(req: NextRequest) {
         [newBestQuick, newBestEndurance, goodAnswers, badAnswers, userId]
       );
     }
-    console.log('Réponse envoyée avec succès');
+    console.log(goodAnswers, badAnswers, userId); //je vois bien ce message 
 
     return NextResponse.json({ message: 'Statistiques mises à jour avec succès' });
   } catch (error) {

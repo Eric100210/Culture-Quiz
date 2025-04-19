@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 
 type Question = {
@@ -19,6 +19,37 @@ export default function QuizEnduranceClient({ questions }: { questions: Question
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [shuffledAnswers, setShuffledAnswers] = useState<string[]>(shuffleAnswers(index));
   const [gameOver, setGameOver] = useState(false);
+  const [wrongCount, setWrongCount] = useState(0);
+
+  useEffect(() => {
+    if (!gameOver) return;
+  
+    const token = localStorage.getItem("authToken");
+    if (!token) return;
+  
+    const updateStats = async () => {
+      try {
+        await fetch("/api/stats", {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            mode: "endurance",
+            score: score,
+            goodAnswers: score,
+            badAnswers: wrongCount,
+          }),
+          
+        });
+      } catch (error) {
+        console.error("Erreur mise à jour stats :", error);
+      }
+    };
+  
+    updateStats();
+  }, [gameOver, score]);
 
   function shuffleAnswers(idx: number): string[] {
     const answers = [
@@ -35,6 +66,11 @@ export default function QuizEnduranceClient({ questions }: { questions: Question
 
     setSelectedAnswer(answer);
     const correct = answer === questions[index].answer;
+    if (answer === questions[index].answer) {
+      setScore((s) => s + 1);
+    } else {
+      setWrongCount((w) => w + 1);
+    }
 
     if (correct) {
       setTimeout(() => {

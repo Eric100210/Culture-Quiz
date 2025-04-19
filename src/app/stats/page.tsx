@@ -4,20 +4,20 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 type Stats = {
+  user_id: number;
   best_score_quick: number;
   best_score_endurance: number;
   good_answers: number;
   bad_answers: number;
+  updated_at: string;
 };
 
 export default function StatsPage() {
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
   const router = useRouter();
-  console.log('router:', router);
 
   useEffect(() => {
-    console.log('Le useEffect est déclenché !');
     const fetchStats = async () => {
       const token = localStorage.getItem('authToken');
       console.log('Statistiques récupérées:');
@@ -37,7 +37,8 @@ export default function StatsPage() {
         if (!res.ok) throw new Error('Non autorisé');
 
         const data = await res.json();
-        setStats(data);
+        console.log('Statistiques:', data);
+        setStats(data.stats);
       } catch (error) {
         console.error('Erreur lors de la récupération des statistiques:', error);
         localStorage.removeItem('authToken');
@@ -50,9 +51,9 @@ export default function StatsPage() {
     fetchStats();
   }, []);
 
-  if (loading) return <p>Chargement des statistiques...</p>;
-
   if (!stats) return <p>Erreur lors du chargement des statistiques.</p>;
+  console.log('Statistiques récupérées :', stats);
+
 
   return (
     <main className="mainPage">
