@@ -19,9 +19,11 @@ Quel compositeur romantique a écrit *La Damnation de Faust* ? ; Berlioz ; Wagne
 Quel roi a envoyé ses troupes pour tuer la Bête du Gévaudan ? ; Louis XV ; Louis XIV ; Louis XVI ; Louis XIII ; Louis XV
 En quelle matière sont faits les billets en euros ? ; Coton ; Plastique ; Papier ; Fibres synthétiques ; Coton
 Quel groupe djihadiste seme la terreur au Nigéria ? ; Boko Haram ; Daesh ; Al-Shabaab ; Al-Qaïda ; Boko Haram
-Quelle est la contenance d'une bouteille de vin Jéroboam ? ; 3 L ; 4,5L ; 6L ; 9L ; 3L
-Quelle est la contenance d'une bouteille de vin Réhoboam ? ; 4,5 L ; 6L ; 9L ; 12L ; 4,5L
-Quelle est la contenance d'une bouteille de vin Mathusalem ? ; 6 L ; 9L ; 4,5L ; 12L ; 6L
+Quelle est la contenance d'une bouteille de vin Jéroboam ? ; 3L ; 4,5L ; 6L ; 9L ; 3L
+Quelle est la contenance d'une bouteille de vin Réhoboam ? ; 4,5L ; 6L ; 9L ; 12L ; 4,5L
+Quelle est la contenance d'une bouteille de vin Mathusalem ? ; 6L ; 9L ; 4,5L ; 12L ; 6L
+Quelle est la contenance d'une bouteille de vin Nabuchodonosor ? ; 6L ; 9L ; 12L ; 15L ; 15L
+Quelle est la contenance d'une bouteille de vin Salmanazar ? ; 6L ; 9L ; 12L ; 15L ; 9L
 Quel jour du mois, chez les Romains, s'appelait 'les calendes' ? ; Le premier jour du mois ; Le dernier jour du mois ; le quinzième jour ; le dixième jour ; Le premier jour du mois
 En quelle année le canal de Panama a-t-il été achevé ? ; 1914 ; 1905 ; 1901 ; 1894 ; 1914
 En quelle année le canal de Suez a-t-il été inauguré ? ; 1869 ; 1879 ; 1859 ; 1889 ; 1869

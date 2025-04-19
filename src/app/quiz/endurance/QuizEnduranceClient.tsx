@@ -81,7 +81,10 @@ export default function QuizEnduranceClient({ questions }: { questions: Question
         setSelectedAnswer(null);
       }, 1000); // petite pause pour voir si c'était juste
     } else {
-      setGameOver(true);
+      setWrongCount((w) => w + 1);
+      setTimeout(() => {
+        setGameOver(true);
+    }, 2000); 
     }
   };
 
@@ -107,28 +110,29 @@ export default function QuizEnduranceClient({ questions }: { questions: Question
         <div className="quiz-container">
           <h2>💀 Mauvaise réponse !</h2>
           <p>Ton score final est de <strong>{score}</strong></p>
-          <button className="quiz-buttons" onClick={resetGame}>Recommencer</button>
+          <button className="restart" onClick={resetGame}>Recommencer</button>
         </div>
       ) : (
         <div className="quiz-container">
           <h2 className="quiz-question">{questions[index].question}</h2>
           {shuffledAnswers.map((ans, i) => (
-            <button
-              key={i}
-              className={`quiz-answer-button ${
-                selectedAnswer
-                  ? isCorrect(ans)
-                    ? "correct"
-                    : selectedAnswer === ans
-                    ? "incorrect"
-                    : ""
+          <button
+            key={i}
+            className={`quiz-answer-button ${
+              selectedAnswer
+                ? isCorrect(ans)
+                  ? "correct"
+                  : selectedAnswer === ans
+                  ? "incorrect"
                   : ""
-              }`}
-              onClick={() => handleAnswerClick(ans)}
-              disabled={selectedAnswer !== null}
-            >
-              {ans}
-            </button>
+                : ""
+            }`}
+            onClick={() => handleAnswerClick(ans)}
+            disabled={selectedAnswer !== null}
+          >
+            {ans}
+          </button>
+
           ))}
         </div>
       )}
