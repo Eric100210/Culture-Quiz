@@ -533,6 +533,7 @@ body {
   margin-top: 30px;
   border-radius: 10px;
   cursor: pointer;
+  width: 200px;
   transition: background-color 0.3s, transform 0.3s;
 }
 
