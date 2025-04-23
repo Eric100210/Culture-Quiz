@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 type Question = {
@@ -17,6 +17,34 @@ export default function QuizThematiqueClient({ questions }: { questions: Questio
   const [index, setIndex] = useState(Math.floor(Math.random() * questions.length));
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [shuffledAnswers, setShuffledAnswers] = useState<string[]>(shuffleAnswers(index));
+  const [wrongCount, setWrongCount] = useState(0);
+  const [score, setScore] = useState(0);
+
+  useEffect(() => {
+    const token = localStorage.getItem("authToken");
+    if (!token) return;
+  
+    const updateStats = async () => {
+      try {
+        await fetch("/api/stats", {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+          body: JSON.stringify({
+            goodAnswers: score,
+            badAnswers: wrongCount,
+          }),
+          
+        });
+      } catch (error) {
+        console.error("Erreur mise à jour stats :", error);
+      }
+    };
+    updateStats();
+  }
+  , [wrongCount, score]);
 
   function shuffleAnswers(idx: number): string[] {
     const answers = [
@@ -29,9 +57,17 @@ export default function QuizThematiqueClient({ questions }: { questions: Questio
   }
 
   const handleAnswerClick = (answer: string) => {
-    if (selectedAnswer !== null) return; // Ne rien faire si une réponse a déjà été donnée
+    if (selectedAnswer !== null) return;
+  
     setSelectedAnswer(answer);
+  
+    if (isCorrect(answer)) {
+      setScore((prev) => prev + 1);
+    } else {
+      setWrongCount((prev) => prev + 1);
+    }
   };
+  
 
   const next = () => {
     const randomIndex = Math.floor(Math.random() * questions.length);
