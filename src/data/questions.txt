@@ -47,6 +47,7 @@ En quelle année a eu lieu la création du Front National ? ; 1972 ; 1965 ; 1978
 Qui est le fondateur de la Croix-Rouge ? ; Henri Dunant ; Albert Schweitzer ; Florence Nightingale ; Clara Barton ; Henri Dunant
 Comment s'appelle la divinité du zoroastrisme ? ; Zarathoustra ; Ahura Mazda ; Vishtaspa ; Mithra ; Ahura Mazda
 Où est enterré le compositeur romantique Wagner ? ; Venise ; Leipzig ; Palerme ; Bayreuth ; Bayreuth
+Quel opéra parmi les suivants n'est pas écrit par Wagner ? ; Le vaisseau fantôme ; Tristan et Iseulde ; Lohengrin ; La Damnation de Faust ; La Damnation de Faust
 Comment s'appelle le verre inrayable que l'on retrouve sur les montres de meilleures qualités ? ; Verre acrylique ; Verre saphir ; Verre minéral ; Verre antioxydant ; Verre saphir
 Quel est le nom du fruit surnommé le fruit du dragon ? ; Grenade ; Pitaya ; Goyave ; Durian ; Pitaya
 En quelle année est créée Electricité de France (EDF) ? ; 1934 ; 1939 ; 1946 ; 1951 ; 1939
@@ -64,3 +65,11 @@ Quel dirigeant appelle-t-on le Grand Timonier ? ; Mao Zedong ; Lénine ; Staline
 En quelle année fut diffusée le premier bulletin météorologique en France ? ; 1936 ; 1942 ; 1946 ; 1951 ; 1946
 Comment s'appelle l'insecte originaire des États-Unis qui a ravagé les vignes européennes ? ; Callopsylla ; Phylloxéra ; Phlébotome ; Rallicola ; Phylloxéra
 Quel cépage ne trouve-t-on pas dans la région viticole de Bordeaux ? ; Cabernet Sauvignon ; Merlot ; Sauvignon ; Gamay ; Gamay
+Pour produire quel alcool utilise-t-on la plante appelée l'agave bleue ? ; Rhum ; Tequila ; Hydromel ; Gin ; Tequila
+De quelle plante est issue la tequila ? ; Nopal ; Agave bleue ; Aloe vera ; Cactus cierges ; Agave bleue
+Quel est le plus grand os du corps humain ? ; Humérus ; Tibia ; Fémur ; Radius ; Fémur
+Quel roman n’a pas été écrit par Robert Louis Stevenson ? ; L'île au trésor ; Voyage avec un âne dans les Cévennes ; L'Étrange cas du docteur Jekyll et de M. Hyde ; Frankenstein ; Frankenstein
+À quoi servaient les tables de Ptolémée ? ; Prédire les marées ; Calculer les distances terrestres ; Observer les taches solaires ; Prévoir les éclipses ; Prévoir les éclipses
+Quel film de Quentin Tarantino imagine une fin alternative à la Seconde Guerre mondiale ? ; Django Unchained ; Pulp Fiction ; Inglourious Basterds ; Kill Bill ; Inglourious Basterds
+Au théâtre, que désigne "côté jardin" vu depuis la salle ? ; Le côté droit ; Le centre de la scène ; Le côté gauche ; L’arrière-scène ; Le côté gauche
+Dans quel James Bond Ursula Andress a-t-elle joué la première James Bond Girl ? ; Goldfinger ; Bons baisers de Russie ; James Bond contre Dr No ; Opération Tonnerre ; James Bond contre Dr No
