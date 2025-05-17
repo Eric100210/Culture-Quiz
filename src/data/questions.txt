@@ -73,3 +73,6 @@ Quel roman n’a pas été écrit par Robert Louis Stevenson ? ; L'île au trés
 Quel film de Quentin Tarantino imagine une fin alternative à la Seconde Guerre mondiale ? ; Django Unchained ; Pulp Fiction ; Inglourious Basterds ; Kill Bill ; Inglourious Basterds
 Au théâtre, que désigne "côté jardin" vu depuis la salle ? ; Le côté droit ; Le centre de la scène ; Le côté gauche ; L’arrière-scène ; Le côté gauche
 Dans quel James Bond Ursula Andress a-t-elle joué la première James Bond Girl ? ; Goldfinger ; Bons baisers de Russie ; James Bond contre Dr No ; Opération Tonnerre ; James Bond contre Dr No
+Quel ingénieur a conçu le métro parisien ? ; Fulgence Bienvenüe ; Louis Blériot ; Henri Fabre ; Arnaud Guérin ; Fulgence Bienvenüe
+Combien mesure un mille marin en mètres ? ; 526 ; 1057 ; 1381 ; 1852 ; 1852
+Quel composant stocke l’énergie dans une montre mécanique ? ; Le cliquet ; Le balancier ; Le ressort de barillet ; L'ancre ; Le ressort de barillet
