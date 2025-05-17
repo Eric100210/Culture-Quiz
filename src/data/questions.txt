@@ -62,3 +62,5 @@ En quelle année la marque Lacoste est-elle fondée ? ; 1903 ; 1918 ; 1933 ; 194
 Dans quelle ville trouve-t-on le Manneken-Pis, statue du petit garçon qui pisse ? ; Amsterdam ; Bruxelles ; Liège ; Rotterdam ; Bruxelles
 Quel dirigeant appelle-t-on le Grand Timonier ? ; Mao Zedong ; Lénine ; Staline ; Kim Jong-il ; Mao Zedong
 En quelle année fut diffusée le premier bulletin météorologique en France ? ; 1936 ; 1942 ; 1946 ; 1951 ; 1946
+Comment s'appelle l'insecte originaire des États-Unis qui a ravagé les vignes européennes ? ; Callopsylla ; Phylloxéra ; Phlébotome ; Rallicola ; Phylloxéra
+Quel cépage ne trouve-t-on pas dans la région viticole de Bordeaux ? ; Cabernet Sauvignon ; Merlot ; Sauvignon ; Gamay ; Gamay
