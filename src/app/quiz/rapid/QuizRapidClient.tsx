@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 
 // Types
@@ -26,6 +26,11 @@ export default function QuizRapideClient({ questions }: { questions: Question[] 
   const [score, setScore] = useState(0);
   const [timeLeft, setTimeLeft] = useState(10); // 60 secondes
   const [isFinished, setIsFinished] = useState(false);
+  const [wrongCount, setWrongCount] = useState(0);
+
+  // On garde l'ancien score pour calculer la différence
+  const prevScoreRef = useRef<number>(score);
+  const prevWrongRef = useRef<number>(wrongCount);
 
   // Shuffle les réponses à chaque nouvelle question
   useEffect(() => {
@@ -49,7 +54,12 @@ export default function QuizRapideClient({ questions }: { questions: Question[] 
   
     const token = localStorage.getItem("authToken");
     if (!token) return;
-  
+
+    const deltaGood = score - prevScoreRef.current;
+    const deltaBad = wrongCount - prevWrongRef.current;
+
+    if (deltaGood === 0 && deltaBad === 0) return;
+
     const updateStats = async () => {
       try {
         await fetch("/api/stats", {
@@ -59,18 +69,20 @@ export default function QuizRapideClient({ questions }: { questions: Question[] 
             Authorization: `Bearer ${token}`,
           },
           body: JSON.stringify({
-            mode: "quick",
-            score: score,
-            goodAnswers: score,
-            badAnswers: wrongCount,
+            goodAnswers: deltaGood,
+            badAnswers: deltaBad,
           }),
-          
         });
+
+        // Mise à jour des références
+        prevScoreRef.current = score;
+        prevWrongRef.current = wrongCount;
+
       } catch (error) {
         console.error("Erreur mise à jour stats :", error);
       }
     };
-  
+
     updateStats();
   }, [isFinished, score]);
 
@@ -83,8 +95,6 @@ export default function QuizRapideClient({ questions }: { questions: Question[] 
     ];
     return answers.sort(() => Math.random() - 0.5);
   }
-
-  const [wrongCount, setWrongCount] = useState(0);
 
 const handleAnswerClick = (answer: string) => {
   if (selectedAnswer !== null) return;

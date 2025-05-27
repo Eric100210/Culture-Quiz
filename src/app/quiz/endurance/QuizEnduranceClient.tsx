@@ -87,7 +87,7 @@ export default function QuizEnduranceClient({ questions }: { questions: Question
         setSelectedAnswer(null);
       }, 1000);
     } else {
-      setWrongCount((w) => w + 1); // ✅ une seule fois ici
+      setWrongCount((w) => w + 1); 
       setTimeout(() => {
         setGameOver(true);
       }, 2000);
