@@ -7,7 +7,6 @@ export default function EditProfilePage() {
     const [error, setError] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
     const router = useRouter();
-    const [username, setUsername] = useState('');
     const [age, setAge] = useState('');
     const [country, setCountry] = useState('');
     const [bio, setBio] = useState('');
@@ -25,11 +24,11 @@ export default function EditProfilePage() {
               'Content-Type': 'application/json',
               Authorization: `Bearer ${token}`,
             },
-            body: JSON.stringify({ username, age, country, bio }),
+            body: JSON.stringify({ age, country, bio }),
           });
     
           const data = await response.json();
-          console.log(data);
+          console.log(country, bio);
     
           if (response.ok) {
             router.push('/profile');  
@@ -53,16 +52,6 @@ export default function EditProfilePage() {
             <div className="login-container">
                 <div className="login-box">
                 <form onSubmit={handleSubmit}>
-          <div className="input-group">
-            <label htmlFor="username">Nom d'utilisateur</label>
-            <input
-              type="username"
-              id="username"
-              name="username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-            />
-          </div>
 
           <div className="input-group">
             <label htmlFor="age">Âge</label>
