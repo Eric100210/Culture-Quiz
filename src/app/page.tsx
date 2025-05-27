@@ -35,15 +35,15 @@ export default function Home() {
         {isLoggedIn ? (
           <>
           <div className="space">
-            <button className="button-login" onClick={() => router.push('/profile')}>
-              Voir mon profil
-            </button>
-          </div>
-          <div className="space">
           <button className="playing-guest" onClick={() => router.push('/quiz')}>
             Jouer 
           </button>
         </div>
+        <div className="space">
+            <button className="button-login" onClick={() => router.push('/profile')}>
+              Voir mon profil
+            </button>
+          </div>
         </>
         ) : (
           <>
