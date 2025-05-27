@@ -528,12 +528,14 @@ body {
 .stats-button {
   background-color: #b586e8;
   color: white;
+  font-size: large;
   border: none;
   padding: 10px 20px;
   margin-top: 30px;
   border-radius: 10px;
   cursor: pointer;
   width: 200px;
+  height: 50px;
   transition: background-color 0.3s, transform 0.3s;
 }
 
@@ -567,4 +569,15 @@ body {
 .restart:hover {
   background-color: #218838;
   transform: scale(1.05);
+}
+
+.edit-profile {
+  background-color: #13a053;
+  color: white;
+  border: none;
+  width: 150px;
+  height: 40px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
 }

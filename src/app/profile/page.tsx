@@ -7,6 +7,9 @@ type UserInfo = {
   id: number;
   email: string;
   username: string;
+  age: number;
+  country: string;
+  bio: string;
 };
 
 export default function ProfilePage() {
@@ -63,7 +66,14 @@ export default function ProfilePage() {
             <>
               <p><strong>Email :</strong> {user.email}</p>
               <p><strong>Nom d’utilisateur :</strong> {user.username}</p>
+              <p><strong>Âge :</strong> {user.age}</p>
+              <p><strong>Pays :</strong> {user.country}</p>
+              <p><strong>Bio :</strong> {user.bio}</p>
+              <button className="edit-profile" onClick={() => router.push('/profile/edit')}>
+                Modifier le profil
+              </button>
             </>
+
           ) : (
             <p>Utilisateur non connecté</p>
             

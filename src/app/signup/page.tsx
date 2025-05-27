@@ -4,7 +4,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import '../globals.css';  // Assurez-vous d'avoir un fichier CSS pour cette page
+import '../globals.css';  
 
 export default function SignupPage() {
   const [username, setUsername] = useState('');
