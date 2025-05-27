@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 
 type Question = {
@@ -19,10 +19,19 @@ export default function QuizThematiqueClient({ questions }: { questions: Questio
   const [shuffledAnswers, setShuffledAnswers] = useState<string[]>(shuffleAnswers(index));
   const [wrongCount, setWrongCount] = useState(0);
   const [score, setScore] = useState(0);
+  // On garde l'ancien score pour calculer la différence
+  const prevScoreRef = useRef<number>(score);
+  const prevWrongRef = useRef<number>(wrongCount);
 
   useEffect(() => {
     const token = localStorage.getItem("authToken");
     if (!token) return;
+  
+    const deltaGood = score - prevScoreRef.current;
+    const deltaBad = wrongCount - prevWrongRef.current;
+  
+    // S'il n'y a pas eu de changement, on ne fait rien
+    if (deltaGood === 0 && deltaBad === 0) return;
   
     const updateStats = async () => {
       try {
@@ -33,18 +42,22 @@ export default function QuizThematiqueClient({ questions }: { questions: Questio
             Authorization: `Bearer ${token}`,
           },
           body: JSON.stringify({
-            goodAnswers: score,
-            badAnswers: wrongCount,
+            goodAnswers: deltaGood,
+            badAnswers: deltaBad,
           }),
-          
         });
+  
+        // Mise à jour des références après succès
+        prevScoreRef.current = score;
+        prevWrongRef.current = wrongCount;
+  
       } catch (error) {
         console.error("Erreur mise à jour stats :", error);
       }
     };
+  
     updateStats();
-  }
-  , [wrongCount, score]);
+  }, [score, wrongCount]);
 
   function shuffleAnswers(idx: number): string[] {
     const answers = [
