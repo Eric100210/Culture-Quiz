@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 
 type Question = {
@@ -21,12 +21,21 @@ export default function QuizEnduranceClient({ questions }: { questions: Question
   const [gameOver, setGameOver] = useState(false);
   const [wrongCount, setWrongCount] = useState(0);
 
+  // On garde l'ancien score pour calculer la différence
+  const prevScoreRef = useRef<number>(score);
+  const prevWrongRef = useRef<number>(wrongCount);
+
   useEffect(() => {
     if (!gameOver) return;
   
     const token = localStorage.getItem("authToken");
     if (!token) return;
-  
+
+    const deltaGood = score - prevScoreRef.current;
+    const deltaBad = wrongCount - prevWrongRef.current;
+
+    if (deltaGood === 0 && deltaBad === 0) return;
+
     const updateStats = async () => {
       try {
         await fetch("/api/stats", {
@@ -36,18 +45,20 @@ export default function QuizEnduranceClient({ questions }: { questions: Question
             Authorization: `Bearer ${token}`,
           },
           body: JSON.stringify({
-            mode: "endurance",
-            score: score,
-            goodAnswers: score,
-            badAnswers: wrongCount,
+            goodAnswers: deltaGood,
+            badAnswers: deltaBad,
           }),
-          
         });
+
+        // Mise à jour des références
+        prevScoreRef.current = score;
+        prevWrongRef.current = wrongCount;
+
       } catch (error) {
         console.error("Erreur mise à jour stats :", error);
       }
     };
-  
+
     updateStats();
   }, [gameOver, score]);
 
@@ -63,28 +74,23 @@ export default function QuizEnduranceClient({ questions }: { questions: Question
 
   const handleAnswerClick = (answer: string) => {
     if (selectedAnswer !== null) return;
-
+  
     setSelectedAnswer(answer);
     const correct = answer === questions[index].answer;
-    if (answer === questions[index].answer) {
-      setScore((s) => s + 1);
-    } else {
-      setWrongCount((w) => w + 1);
-    }
-
+  
     if (correct) {
+      setScore((s) => s + 1);
       setTimeout(() => {
-        setScore(score + 1);
         const newIndex = Math.floor(Math.random() * questions.length);
         setIndex(newIndex);
         setShuffledAnswers(shuffleAnswers(newIndex));
         setSelectedAnswer(null);
-      }, 1000); // petite pause pour voir si c'était juste
+      }, 1000);
     } else {
-      setWrongCount((w) => w + 1);
+      setWrongCount((w) => w + 1); // ✅ une seule fois ici
       setTimeout(() => {
         setGameOver(true);
-    }, 2000); 
+      }, 2000);
     }
   };
 
