@@ -76,3 +76,10 @@ Dans quel James Bond Ursula Andress a-t-elle joué la première James Bond Girl 
 Quel ingénieur a conçu le métro parisien ? ; Fulgence Bienvenüe ; Louis Blériot ; Henri Fabre ; Arnaud Guérin ; Fulgence Bienvenüe
 Combien mesure un mille marin en mètres ? ; 526 ; 1057 ; 1381 ; 1852 ; 1852
 Quel composant stocke l’énergie dans une montre mécanique ? ; Le cliquet ; Le balancier ; Le ressort de barillet ; L'ancre ; Le ressort de barillet
+Quel est le fleuve le plus long du monde ? ; Nil ; Yangtsé : Amazone ; Mississipi ; Amazone
+Dans quelle région viticole se trouve la célèbre appellation Romanée-Conti ? ; Vallée du Rhône ; Bordeaux ; Bourgogne ; Sud-Ouest ; Bourgogne
+Quelle est la seule appellation qui peut produire du rosé en mélangeant vin rouge et vin blanc ? ; Champagne ; Côtes de Provence ; Bandol ; Roussillon ; Champagne
+En quelle année a été instaurée le prix Nobel ? ; 1893 ; 1901 ; 1912 ; 1920 ; 1901
+Pour quelle invention Alfred Nobel est-il connu ? ; La dynamite ; L'ampoule électrique ; La photographie ; Le savon liquide ; La dynamite
+Pour quel exploit est connu Robert Edwin Peary ? ; Traverser l'Atlantique en avion ; Découvrir le pôle nord ; Gravir l'Everest ; Premier homme dans l'espace ; Découvrir le pôle nord
+Qu'est-ce que le saturnisme ? ; Intoxication par le plomb ; Affection cutanée due au soleil ; Maladie des os ; Pathologie pulmonaire liée au charbon ; Intoxication par le plomb
