@@ -24,7 +24,7 @@ export default function QuizRapideClient({ questions }: { questions: Question[] 
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [shuffledAnswers, setShuffledAnswers] = useState<string[]>([]);
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(10); // 60 secondes
+  const [timeLeft, setTimeLeft] = useState(60); // 60 secondes
   const [isFinished, setIsFinished] = useState(false);
   const [wrongCount, setWrongCount] = useState(0);
 
