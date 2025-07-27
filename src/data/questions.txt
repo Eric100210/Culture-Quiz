@@ -2,6 +2,7 @@ Comment appelle-t-on un poème dont les premières lettres de chaque vers formen
 Quel est le principal pays producteur de kiwis ? ; Argentine ; Chili ; Chine ; Japon ; Chine
 Comment s'appelle l'arbuste sur lequel pousse le kiwi ? ; Actinidier ; Troène ; Asiminier ; Feijoa ; Actinidier
 Comment s’appellent les frais bancaires liés à un découvert ? ; Agios ; Commissions ; Frais de gestion ; Intérêts ; Agios
+Qui a composé la symphonie Ainsi Parlait Zarathoustra ? ; Brahms ; Strauss ; Haydn ; Wagner ; Strauss
 Quel homme a fondé Al-Qaïda ? ; Oussama Ben Laden ; Saddam Hussein ; Ayman al-Zawahiri ; Abu Bakr al-Baghdadi ; Oussama Ben Laden
 Dans quelle ville Léonard de Vinci est-il mort ? ; Amboise ; Mantoue ; Florence ; Venise ; Amboise
 Sur quel mont Moïse a-t-il reçu les instructions pour construire l’arche d’alliance ? ; Sinaï ; Olivier ; Ararat ; Nebo ; Sinaï
@@ -15,6 +16,13 @@ Quel roi babylonien a détruit le Temple de Salomon ? ; Nabuchodonosor ; Hammura
 De quoi est constitué le ballast ferroviaire ? ; Pierres ; Sable ; Terre ; Graviers ; Pierres
 En quelle année a eu lieu la bataille d’Hernani ? ; 1830 ; 1845 ; 1855 ; 1870 ; 1830
 Quel métal extrait-on principalement de la bauxite ? ; Aluminium ; Lithium ; Zinc ; Cuivre ; Aluminium
+De quel pays Bismarck a-t-il oeuvré pour l'unification ? ; Italie ; URSS ; Allemagne ; Autriche ; Allemagne
+En quelle année les États allemands s'unifient-ils pour devenir l'empire Allemand ? ; 1862 ; 1871 ; 1880 ; 1890 ; 1871
+Par qui fut fondé l'ordre cistersien ? ; Robert de Molesme ; Bernard de Clairvaux ; Armand-Jean de Rancé ; Etienne Harding ; Robert de Molesme
+En quelle année la ville de Byzance devient-elle Constantinople (Istanbul actuelle) ? ; 330 ; 390 ; 476 : 512 ; 330
+En quelle année Constantinople tombe-t-elle aux mains de l'empire ottoman ? ; 1204 ; 1351 ; 1453 ; 1496 ; 1453
+Qu'annonce le glas dans le langage des cloches ? (langage campanaire) ; une mort ; la messe ; un mariage ; un danger ; une mort
+Qu'annonce le tocsin dans le langage des cloches ? (langage campanaire) ; une mort ; la messe ; un mariage ; un danger ; un danger
 Quel compositeur romantique a écrit *La Damnation de Faust* ? ; Berlioz ; Wagner ; Verdi ; Saint-Saëns ; Berlioz
 Quel roi a envoyé ses troupes pour tuer la Bête du Gévaudan ? ; Louis XV ; Louis XIV ; Louis XVI ; Louis XIII ; Louis XV
 En quelle matière sont faits les billets en euros ? ; Coton ; Plastique ; Papier ; Fibres synthétiques ; Coton
