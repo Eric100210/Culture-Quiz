@@ -19,7 +19,9 @@ Quel métal extrait-on principalement de la bauxite ? ; Aluminium ; Lithium ; Zi
 De quel pays Bismarck a-t-il oeuvré pour l'unification ? ; Italie ; URSS ; Allemagne ; Autriche ; Allemagne
 En quelle année les États allemands s'unifient-ils pour devenir l'empire Allemand ? ; 1862 ; 1871 ; 1880 ; 1890 ; 1871
 Par qui fut fondé l'ordre cistersien ? ; Robert de Molesme ; Bernard de Clairvaux ; Armand-Jean de Rancé ; Etienne Harding ; Robert de Molesme
-En quelle année la ville de Byzance devient-elle Constantinople (Istanbul actuelle) ? ; 330 ; 390 ; 476 : 512 ; 330
+En quelle année la ville de Byzance devient-elle Constantinople (Istanbul actuelle) ? ; 330 ; 390 ; 476 ; 512 ; 330
+Qui fut le premier président de la Turquie, et fut surnommé le père des turcs ? ; Mehmet Ali Pacha ; Enver Pacha ; Mustafa Kemal ; Cemal Gürsel ; Mustafa Kemal
+En quelle année la république de Turquie fut-elle proclamée par Atatürk ? ; 1919 ; 1923 ; 1927 ; 1931 ; 1923
 En quelle année Constantinople tombe-t-elle aux mains de l'empire ottoman ? ; 1204 ; 1351 ; 1453 ; 1496 ; 1453
 Qu'annonce le glas dans le langage des cloches ? (langage campanaire) ; une mort ; la messe ; un mariage ; un danger ; une mort
 Qu'annonce le tocsin dans le langage des cloches ? (langage campanaire) ; une mort ; la messe ; un mariage ; un danger ; un danger
@@ -68,9 +70,10 @@ Où est né le célèbe auteur Franz Kafka ? ; Prague ; Berlin ; Paris ; Vienne 
 Qui est l'auteur de La Métamorphose ou encore du Procès ? ; Gogol ; Dostoïevski ; Kafka ; Camus ; Kafka
 De quel pays Saddam Hussein fut-il le président entre 1979 et 2003 ? ; Iran ; Irak ; Arabie Saoudite ; Syrie ; Irak
 En quelle année meurt Mahomet ? ; 622 ; 626 ; 629 ; 632 ; 632
+D'où provenaient majoritairement les janissaires de l'empire ottoman ? ; les populations chrétiennes des Balkans ; les écoles militaires ottomanes ; les prisonniers mongols ; les familles nobles ottomanes ; les populations chrétiennes des Balkans
 Qui est l'auteur de la Condition humaine ? ; Balzac ; Malraux ; Zola ; Kafka ; Malraux
 De quel président André Malraux fut-il ministre de la culture ? ; Coty ; de Gaulle ; Pompidou ; Auriol ; de Gaulle
-Qui est la première femme qui devient Premier Ministre du Royaume-Uni ? ; Deborah James ; Theresa May : Margaret Thatcher ; Nancy Astor ; Margaret Thatcher
+Qui est la première femme qui devient Premier Ministre du Royaume-Uni ? ; Deborah James ; Theresa May ; Margaret Thatcher ; Nancy Astor ; Margaret Thatcher
 Quel personnage les chiites ont-ils décidé de suivre à la mort de Mahomet ? ; Ali (gendre du prophète) ; Abou-Bakr (compagnon du prohète) ; Khadidja (première épouse du prophète) ; Al-Qasim (fils aîné du prophète) ; Ali (gendre du prophète)
 De quel sport le fondateur de la marque Lacoste, René Lacoste, était-il professionnel ? ; Football ; Cyclisme ; Tennis ; Boxe ; Tennis
 En quelle année la marque Lacoste est-elle fondée ? ; 1903 ; 1918 ; 1933 ; 1948 ; 1933
