@@ -99,4 +99,9 @@ Quelle est la seule appellation qui peut produire du rosé en mélangeant vin ro
 En quelle année a été instaurée le prix Nobel ? ; 1893 ; 1901 ; 1912 ; 1920 ; 1901
 Pour quelle invention Alfred Nobel est-il connu ? ; La dynamite ; L'ampoule électrique ; La photographie ; Le savon liquide ; La dynamite
 Pour quel exploit est connu Robert Edwin Peary ? ; Traverser l'Atlantique en avion ; Découvrir le pôle nord ; Gravir l'Everest ; Premier homme dans l'espace ; Découvrir le pôle nord
+Quel peuple met fin au califat abbasside de Bagdad en 1258 ? ; Les croisés ; Les byzantins ; Les Mongols ; Les Mamelouks ; Les Mongols
+Quelle était la capitale de l'empire omeyyade ? ; La Mecque ; Damas ; Bagdad ; Téhéran ; Damas
+Quelle dynastie musulmane s'étendit jusqu'en Espagne au XIIIe siècle ? ; Abbassides ; Omeyyades ; Seldjoukides ; Fatimides ; Omeyyades
+Quelle dynastie musulmane succéda aux Omeyyades en 750 ? ; Abbassides ; Seldjoukides ; Fatimides ; Rahmanides ; Abbassides
+Dans quel pays les Mamelouks ont-ils instauré un sultanat au XIIIè siècle ? ; Egypte ; Turquie ; Iran ; Irak ; Egypte
 Qu'est-ce que le saturnisme ? ; Intoxication par le plomb ; Affection cutanée due au soleil ; Maladie des os ; Pathologie pulmonaire liée au charbon ; Intoxication par le plomb
