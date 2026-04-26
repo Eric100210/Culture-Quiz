@@ -29,13 +29,12 @@ export default function QuizEnduranceClient({
   questions: Question[];
 }) {
   const router = useRouter();
+  const initialIndex = useRef(Math.floor(Math.random() * questions.length));
   const [score, setScore] = useState(0);
-  const [index, setIndex] = useState(() =>
-    Math.floor(Math.random() * questions.length)
-  );
+  const [index, setIndex] = useState(initialIndex.current);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [shuffledAnswers, setShuffledAnswers] = useState<string[]>(() =>
-    shuffleAnswers(questions, Math.floor(Math.random() * questions.length))
+    shuffleAnswers(questions, initialIndex.current)
   );
   const [gameOver, setGameOver] = useState(false);
   const [wrongCount, setWrongCount] = useState(0);
