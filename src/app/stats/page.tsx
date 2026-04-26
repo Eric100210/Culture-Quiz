@@ -15,6 +15,7 @@ type Stats = {
 export default function StatsPage() {
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
+  const [resetting, setResetting] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -50,6 +51,24 @@ export default function StatsPage() {
       </div>
     );
   }
+
+  const handleReset = async () => {
+    if (!confirm("Réinitialiser toutes tes statistiques ? Cette action est irréversible.")) return;
+    const token = localStorage.getItem("authToken");
+    if (!token) return;
+    setResetting(true);
+    try {
+      const res = await fetch("/api/stats", {
+        method: "DELETE",
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (res.ok) {
+        setStats((s) => s ? { ...s, best_score_quick: 0, best_score_endurance: 0, good_answers: 0, wrong_answers: 0 } : s);
+      }
+    } finally {
+      setResetting(false);
+    }
+  };
 
   if (!stats) return null;
 
@@ -124,6 +143,13 @@ export default function StatsPage() {
             onClick={() => router.push("/profile")}
           >
             Retour au profil
+          </button>
+          <button
+            className="btn btn-danger"
+            onClick={handleReset}
+            disabled={resetting}
+          >
+            {resetting ? "Réinitialisation…" : "Réinitialiser les statistiques"}
           </button>
         </div>
       </div>

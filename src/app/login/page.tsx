@@ -24,7 +24,7 @@ export default function LoginPage() {
       const data = await res.json();
       if (res.ok) {
         localStorage.setItem("authToken", data.token);
-        router.push("/profile");
+        router.push("/");
       } else {
         setError(data.message || "Erreur lors de la connexion");
       }

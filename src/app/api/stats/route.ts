@@ -94,3 +94,29 @@ export async function PATCH(req: NextRequest) {
   }
 }
 
+// DELETE – Réinitialiser les statistiques
+export async function DELETE(req: NextRequest) {
+  const userId = getUserIdFromToken(req);
+
+  if (!userId) {
+    return NextResponse.json({ message: 'Non autorisé' }, { status: 401 });
+  }
+
+  try {
+    await pool.query(
+      `UPDATE user_stats SET
+        best_score_quick = 0,
+        best_score_endurance = 0,
+        good_answers = 0,
+        wrong_answers = 0,
+        updated_at = CURRENT_TIMESTAMP
+       WHERE user_id = $1`,
+      [userId]
+    );
+    return NextResponse.json({ message: 'Statistiques réinitialisées' });
+  } catch (error) {
+    console.error('Erreur lors de la réinitialisation des statistiques:', error);
+    return NextResponse.json({ message: 'Erreur serveur' }, { status: 500 });
+  }
+}
+
