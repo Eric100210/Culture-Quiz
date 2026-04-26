@@ -54,7 +54,7 @@ export default function QuizEnduranceClient({
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ goodAnswers: deltaGood, badAnswers: deltaBad }),
+      body: JSON.stringify({ mode: 'endurance', score, goodAnswers: deltaGood, badAnswers: deltaBad }),
     })
       .then(() => {
         prevScoreRef.current = score;

@@ -22,6 +22,18 @@ export default function QuizRapideClient({
   questions: Question[];
 }) {
   const router = useRouter();
+  const initialIndex = useRef(Math.floor(Math.random() * questions.length));
+  const [index, setIndex] = useState(initialIndex.current);
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+  const [shuffledAnswers, setShuffledAnswers] = useState<string[]>(() =>
+    shuffleAnswers(initialIndex.current)
+  );
+  const [score, setScore] = useState(0);
+  const [timeLeft, setTimeLeft] = useState(TOTAL_TIME);
+  const [isFinished, setIsFinished] = useState(false);
+  const [wrongCount, setWrongCount] = useState(0);
+  const prevScoreRef = useRef<number>(0);
+  const prevWrongRef = useRef<number>(0);
 
   if (!questions || questions.length === 0) {
     return (
@@ -31,22 +43,6 @@ export default function QuizRapideClient({
       </div>
     );
   }
-
-  const [index, setIndex] = useState(() =>
-    Math.floor(Math.random() * questions.length)
-  );
-  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
-  const [shuffledAnswers, setShuffledAnswers] = useState<string[]>([]);
-  const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(TOTAL_TIME);
-  const [isFinished, setIsFinished] = useState(false);
-  const [wrongCount, setWrongCount] = useState(0);
-  const prevScoreRef = useRef<number>(0);
-  const prevWrongRef = useRef<number>(0);
-
-  useEffect(() => {
-    setShuffledAnswers(shuffleAnswers(index));
-  }, [index]);
 
   useEffect(() => {
     if (isFinished) return;
@@ -68,7 +64,7 @@ export default function QuizRapideClient({
         "Content-Type": "application/json",
         Authorization: `Bearer ${token}`,
       },
-      body: JSON.stringify({ goodAnswers: deltaGood, badAnswers: deltaBad }),
+      body: JSON.stringify({ mode: 'quick', score, goodAnswers: deltaGood, badAnswers: deltaBad }),
     })
       .then(() => {
         prevScoreRef.current = score;
@@ -97,6 +93,7 @@ export default function QuizRapideClient({
     setTimeout(() => {
       const next = Math.floor(Math.random() * questions.length);
       setIndex(next);
+      setShuffledAnswers(shuffleAnswers(next));
       setSelectedAnswer(null);
     }, 500);
   };

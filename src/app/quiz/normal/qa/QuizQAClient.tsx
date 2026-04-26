@@ -20,12 +20,11 @@ export default function QuizQAClient({
   questions: Question[];
 }) {
   const router = useRouter();
-  const [index, setIndex] = useState(() =>
-    Math.floor(Math.random() * questions.length)
-  );
+  const initialIndex = useRef(Math.floor(Math.random() * questions.length));
+  const [index, setIndex] = useState(initialIndex.current);
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [shuffledAnswers, setShuffledAnswers] = useState<string[]>(() =>
-    shuffleAnswers(Math.floor(Math.random() * questions.length))
+    shuffleAnswers(initialIndex.current)
   );
   const [wrongCount, setWrongCount] = useState(0);
   const [score, setScore] = useState(0);
