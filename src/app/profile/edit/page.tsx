@@ -1,103 +1,116 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function EditProfilePage() {
-    const [error, setError] = useState<string | null>(null);
-    const [loading, setLoading] = useState(false);
-    const router = useRouter();
-    const [age, setAge] = useState('');
-    const [country, setCountry] = useState('');
-    const [bio, setBio] = useState('');
-    const token = localStorage.getItem('authToken');
-    
-    const handleSubmit = async (event: React.FormEvent) => {
-        event.preventDefault();
-        setLoading(true);
-        setError(null);
-    
-        try {
-          const response = await fetch('/api/profile', {
-            method: 'PATCH',
-            headers: {
-              'Content-Type': 'application/json',
-              Authorization: `Bearer ${token}`,
-            },
-            body: JSON.stringify({ age, country, bio }),
-          });
-    
-          const data = await response.json();
-          console.log(country, bio);
-    
-          if (response.ok) {
-            router.push('/profile');  
-          } else {
-            // Afficher une erreur si la connexion échoue
-            setError(data.message);
-          }
-        } catch (error) {
-          console.error('Erreur lors de la modification du profil:', error);
-          setError('Erreur lors de la modification du profil');
-        } finally {
-          setLoading(false);
-        }
-      };
+  const [age, setAge] = useState("");
+  const [country, setCountry] = useState("");
+  const [bio, setBio] = useState("");
+  const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
-    return(
-        <main className="mainPage">
-            <div className="header">
-                <h1 className="welcome">Profil utilisateur</h1>
-            </div>
-            <div className="login-container">
-                <div className="login-box">
-                <form onSubmit={handleSubmit}>
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
+    const token = localStorage.getItem("authToken");
+    try {
+      const res = await fetch("/api/profile", {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ age, country, bio }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        router.push("/profile");
+      } else {
+        setError(data.message);
+      }
+    } catch {
+      setError("Erreur lors de la modification du profil");
+    } finally {
+      setLoading(false);
+    }
+  };
 
-          <div className="input-group">
-            <label htmlFor="age">Âge</label>
+  return (
+    <div className="auth-page">
+      <div className="auth-card">
+        <div className="auth-logo">✏️</div>
+        <h1>Modifier le profil</h1>
+        <p className="auth-subtitle">Mets tes informations à jour</p>
+
+        {error && <div className="form-error">⚠ {error}</div>}
+
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label className="form-label" htmlFor="age">
+              Âge
+            </label>
             <input
-              type="age"
+              className="form-input"
+              type="number"
               id="age"
-              name="age"
               value={age}
               onChange={(e) => setAge(e.target.value)}
+              placeholder="25"
+              min="1"
+              max="120"
             />
           </div>
 
-          <div className="input-group">
-            <label htmlFor="country">Pays</label>
+          <div className="form-group">
+            <label className="form-label" htmlFor="country">
+              Pays
+            </label>
             <input
-              type="country"
+              className="form-input"
+              type="text"
               id="country"
-              name="country"
               value={country}
               onChange={(e) => setCountry(e.target.value)}
+              placeholder="France"
             />
           </div>
 
-          <div className="input-group">
-            <label htmlFor="bio">Bio</label>
+          <div className="form-group">
+            <label className="form-label" htmlFor="bio">
+              Bio
+            </label>
             <input
-              type="bio"
+              className="form-input"
+              type="text"
               id="bio"
-              name="bio"
               value={bio}
               onChange={(e) => setBio(e.target.value)}
+              placeholder="Passionné de culture générale…"
             />
           </div>
 
-          <button type="submit" disabled={loading} className="submit-btn">
-            {loading ? 'Chargement...' : 'Valider les changements'}
+          <button
+            type="submit"
+            className="btn btn-primary btn-full"
+            disabled={loading}
+            style={{ marginTop: "8px" }}
+          >
+            {loading ? "Enregistrement…" : "Enregistrer les modifications"}
           </button>
         </form>
+
+        <div style={{ marginTop: "12px" }}>
+          <button
+            className="btn btn-outline btn-full"
+            onClick={() => router.push("/profile")}
+          >
+            Annuler
+          </button>
+        </div>
       </div>
-                
-            </div>
-            <div>
-        <button className="retour" onClick={() => router.push("/profile")}>
-          Retour
-        </button>
-      </div>
-        </main>
-    )
+    </div>
+  );
 }

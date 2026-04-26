@@ -11,11 +11,14 @@ export function loadQuestions(): Question[] {
   const filePath = path.join(process.cwd(), "src/data/themes.txt");
   const raw = fs.readFileSync(filePath, "utf-8");
 
-  return raw.split("\n").map((line) => {
-    const [question, answer] = line.split(" ; ");
-    return {
-      question: question.trim(),
-      answer: answer.trim(),
-    };
-  });
+  return raw
+    .split("\n")
+    .filter((line) => line.includes(" ; "))
+    .map((line) => {
+      const [question, answer] = line.split(" ; ");
+      return {
+        question: question.trim(),
+        answer: answer.trim(),
+      };
+    });
 }

@@ -55,7 +55,7 @@ export async function PATCH(req: NextRequest) {
     // Si aucune ligne n'existe, on en crée une
     if (current.rows.length === 0) {
       await pool.query(
-        `INSERT INTO user_stats (user_id, best_score_quick, best_score_endurance, good_answers, bad_answers)
+        `INSERT INTO user_stats (user_id, best_score_quick, best_score_endurance, good_answers, wrong_answers)
          VALUES ($1, $2, $3, $4, $5)`,
         [
           userId,
@@ -79,7 +79,7 @@ export async function PATCH(req: NextRequest) {
           best_score_quick = $1,
           best_score_endurance = $2,
           good_answers = good_answers + $3,
-          bad_answers = bad_answers + $4,
+          wrong_answers = wrong_answers + $4,
           updated_at = CURRENT_TIMESTAMP
          WHERE user_id = $5`,
         [newBestQuick, newBestEndurance, goodAnswers, badAnswers, userId]

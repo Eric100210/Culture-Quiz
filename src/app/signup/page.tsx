@@ -1,110 +1,110 @@
-// src/app/signup/page.tsx
+"use client";
 
-'use client';
-
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import '../globals.css';  
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function SignupPage() {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
     setLoading(true);
     setError(null);
-
     try {
-      const response = await fetch('/api/signup', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+      const res = await fetch("/api/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, email, password }),
       });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        // Sauvegarder le token dans localStorage (ou cookies)
-        localStorage.setItem('authToken', data.token);
-
-        // Rediriger l'utilisateur après une connexion réussie
-        router.push('/quiz');  
+      const data = await res.json();
+      if (res.ok) {
+        localStorage.setItem("authToken", data.token);
+        router.push("/quiz");
       } else {
-        // Afficher une erreur si la connexion échoue
         setError(data.message);
       }
-    } catch (error) {
-      console.error('Erreur lors de la création de compte:', error);
-      setError('Erreur lors de la création de la compte');
+    } catch {
+      setError("Erreur lors de la création du compte");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <main className="mainPage">
-    <div className="header">
-          <h1 className="welcome"> Créez votre compte</h1>
-      </div>
-    <div className="login-container">
-      <div className="login-box">
-        
+    <div className="auth-page">
+      <div className="auth-card">
+        <div className="auth-logo">🧠</div>
+        <h1>Créer un compte</h1>
+        <p className="auth-subtitle">Rejoins la communauté Quiz Culture !</p>
 
-        {error && <p className="error-message">{error}</p>}
+        {error && <div className="form-error">⚠ {error}</div>}
 
         <form onSubmit={handleSubmit}>
-          <div className="input-group">
-            <label htmlFor="username">Nom d'utilisateur</label>
+          <div className="form-group">
+            <label className="form-label" htmlFor="username">
+              Nom d&apos;utilisateur
+            </label>
             <input
-              type="username"
-              id="usernmae"
-              name="username"
+              className="form-input"
+              type="text"
+              id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
+              placeholder="johndoe"
               required
             />
           </div>
 
-          <div className="input-group">
-            <label htmlFor="email">Email</label>
+          <div className="form-group">
+            <label className="form-label" htmlFor="email">
+              Adresse email
+            </label>
             <input
+              className="form-input"
               type="email"
               id="email"
-              name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              placeholder="you@example.com"
               required
             />
           </div>
 
-          <div className="input-group">
-            <label htmlFor="password">Mot de passe</label>
+          <div className="form-group">
+            <label className="form-label" htmlFor="password">
+              Mot de passe
+            </label>
             <input
+              className="form-input"
               type="password"
               id="password"
-              name="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              placeholder="••••••••"
               required
             />
           </div>
 
-          <button type="submit" disabled={loading} className="submit-btn">
-            {loading ? 'Chargement...' : 'Créer votre compte'}
+          <button
+            type="submit"
+            className="btn btn-primary btn-full"
+            disabled={loading}
+            style={{ marginTop: "8px" }}
+          >
+            {loading ? "Création…" : "Créer mon compte"}
           </button>
         </form>
+
+        <p className="auth-footer">
+          Déjà un compte ? <Link href="/login">Se connecter</Link>
+        </p>
       </div>
     </div>
-    <div>
-      <button className="retour" onClick={() => router.push("/")}> Retour </button>
-      </div>
-    </main>
   );
 }

@@ -12,142 +12,156 @@ type Question = {
   answer: string;
 };
 
-export default function QuizEnduranceClient({ questions }: { questions: Question[] }) {
+const LETTERS = ["A", "B", "C", "D"];
+
+function shuffleAnswers(questions: Question[], idx: number): string[] {
+  return [
+    questions[idx].answer1,
+    questions[idx].answer2,
+    questions[idx].answer3,
+    questions[idx].answer4,
+  ].sort(() => Math.random() - 0.5);
+}
+
+export default function QuizEnduranceClient({
+  questions,
+}: {
+  questions: Question[];
+}) {
   const router = useRouter();
   const [score, setScore] = useState(0);
-  const [index, setIndex] = useState(Math.floor(Math.random() * questions.length));
+  const [index, setIndex] = useState(() =>
+    Math.floor(Math.random() * questions.length)
+  );
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
-  const [shuffledAnswers, setShuffledAnswers] = useState<string[]>(shuffleAnswers(index));
+  const [shuffledAnswers, setShuffledAnswers] = useState<string[]>(() =>
+    shuffleAnswers(questions, Math.floor(Math.random() * questions.length))
+  );
   const [gameOver, setGameOver] = useState(false);
   const [wrongCount, setWrongCount] = useState(0);
-
-  // On garde l'ancien score pour calculer la différence
-  const prevScoreRef = useRef<number>(score);
-  const prevWrongRef = useRef<number>(wrongCount);
+  const prevScoreRef = useRef<number>(0);
+  const prevWrongRef = useRef<number>(0);
 
   useEffect(() => {
     if (!gameOver) return;
-  
     const token = localStorage.getItem("authToken");
     if (!token) return;
-
     const deltaGood = score - prevScoreRef.current;
     const deltaBad = wrongCount - prevWrongRef.current;
-
     if (deltaGood === 0 && deltaBad === 0) return;
-
-    const updateStats = async () => {
-      try {
-        await fetch("/api/stats", {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-          body: JSON.stringify({
-            goodAnswers: deltaGood,
-            badAnswers: deltaBad,
-          }),
-        });
-
-        // Mise à jour des références
+    fetch("/api/stats", {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ goodAnswers: deltaGood, badAnswers: deltaBad }),
+    })
+      .then(() => {
         prevScoreRef.current = score;
         prevWrongRef.current = wrongCount;
-
-      } catch (error) {
-        console.error("Erreur mise à jour stats :", error);
-      }
-    };
-
-    updateStats();
+      })
+      .catch((e) => console.error("Erreur stats :", e));
   }, [gameOver, score]);
 
-  function shuffleAnswers(idx: number): string[] {
-    const answers = [
-      questions[idx].answer1,
-      questions[idx].answer2,
-      questions[idx].answer3,
-      questions[idx].answer4,
-    ];
-    return answers.sort(() => Math.random() - 0.5);
-  }
-
-  const handleAnswerClick = (answer: string) => {
+  const handleAnswer = (answer: string) => {
     if (selectedAnswer !== null) return;
-  
     setSelectedAnswer(answer);
     const correct = answer === questions[index].answer;
-  
     if (correct) {
       setScore((s) => s + 1);
       setTimeout(() => {
-        const newIndex = Math.floor(Math.random() * questions.length);
-        setIndex(newIndex);
-        setShuffledAnswers(shuffleAnswers(newIndex));
+        const newIdx = Math.floor(Math.random() * questions.length);
+        setIndex(newIdx);
+        setShuffledAnswers(shuffleAnswers(questions, newIdx));
         setSelectedAnswer(null);
-      }, 1000);
+      }, 900);
     } else {
-      setWrongCount((w) => w + 1); 
-      setTimeout(() => {
-        setGameOver(true);
-      }, 2000);
+      setWrongCount((w) => w + 1);
+      setTimeout(() => setGameOver(true), 1800);
     }
   };
 
-  const resetGame = () => {
+  const reset = () => {
+    const newIdx = Math.floor(Math.random() * questions.length);
     setScore(0);
-    const newIndex = Math.floor(Math.random() * questions.length);
-    setIndex(newIndex);
-    setShuffledAnswers(shuffleAnswers(newIndex));
+    setWrongCount(0);
+    setIndex(newIdx);
+    setShuffledAnswers(shuffleAnswers(questions, newIdx));
     setSelectedAnswer(null);
     setGameOver(false);
+    prevScoreRef.current = 0;
+    prevWrongRef.current = 0;
   };
 
-  const isCorrect = (answer: string) => answer === questions[index].answer;
+  const isCorrect = (ans: string) => ans === questions[index].answer;
+
+  if (gameOver) {
+    return (
+      <div className="page">
+        <div className="page-content">
+          <div className="gameover-card">
+            <div className="gameover-emoji">💀</div>
+            <h2 className="gameover-title">Mauvaise réponse !</h2>
+            <div className="gameover-score-value">{score}</div>
+            <p className="gameover-score-label">bonnes réponses consécutives</p>
+            <div className="gameover-actions">
+              <button className="btn btn-primary" onClick={reset}>
+                Recommencer
+              </button>
+              <button
+                className="btn btn-outline"
+                onClick={() => router.push("/quiz")}
+              >
+                Autres modes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
-    <main style={{ padding: "2rem" }}>
-      <div className="header">
-        <h1>Quiz endurance :</h1>
-        <p className="score">Score : {score}</p>
-      </div>
-        <div className="back-quiz">
-      {gameOver ? (
-        <div className="quiz-container">
-          <h2>💀 Mauvaise réponse !</h2>
-          <p>Ton score final est de <strong>{score}</strong></p>
-          <button className="restart" onClick={resetGame}>Recommencer</button>
-        </div>
-      ) : (
-        <div className="quiz-container">
-          <h2 className="quiz-question">{questions[index].question}</h2>
-          {shuffledAnswers.map((ans, i) => (
-          <button
-            key={i}
-            className={`quiz-answer-button ${
-              selectedAnswer
-                ? isCorrect(ans)
-                  ? "correct"
-                  : selectedAnswer === ans
-                  ? "incorrect"
-                  : ""
-                : ""
-            }`}
-            onClick={() => handleAnswerClick(ans)}
-            disabled={selectedAnswer !== null}
-          >
-            {ans}
-          </button>
-
-          ))}
-        </div>
-      )}
-        </div>
-        <div>
-        <button className="retour" onClick={() => router.push("/quiz")}>
-          Retour
+    <div className="page">
+      <div className="page-content">
+        <button className="back-btn" onClick={() => router.push("/quiz")}>
+          ← Retour
         </button>
+
+        <div className="quiz-header">
+          <span className="quiz-mode-badge">🔥 Quiz Endurance</span>
+          <div className="quiz-score-group">
+            <span className="score-pill good">🔥 {score}</span>
+          </div>
+        </div>
+
+        <div className="quiz-card animate-in">
+          <p className="quiz-question-text">{questions[index].question}</p>
+
+          <div className="answer-grid">
+            {shuffledAnswers.map((ans, i) => (
+              <button
+                key={i}
+                className={`answer-btn${
+                  selectedAnswer
+                    ? isCorrect(ans)
+                      ? " correct"
+                      : selectedAnswer === ans
+                      ? " incorrect"
+                      : ""
+                    : ""
+                }`}
+                onClick={() => handleAnswer(ans)}
+                disabled={selectedAnswer !== null}
+              >
+                <span className="answer-letter">{LETTERS[i]}</span>
+                {ans}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
-    </main>
+    </div>
   );
 }

@@ -32,7 +32,7 @@ export async function POST(req: NextRequest) {
 
     // Initialise les stats de l'utilisateur dans la table user_stats
     await pool.query(
-      'INSERT INTO user_stats (user_id, best_score_quick, best_score_endurance, good_answers, bad_answers) VALUES ($1, 0, 0, 0, 0)',
+      'INSERT INTO user_stats (user_id, best_score_quick, best_score_endurance, good_answers, wrong_answers) VALUES ($1, 0, 0, 0, 0)',
       [userId]
     );
 

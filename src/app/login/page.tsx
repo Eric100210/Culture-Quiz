@@ -1,96 +1,95 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { useRouter } from 'next/navigation';
-import '../globals.css';  // On garde ton CSS global
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function LoginPage() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
-  const handleSubmit = async (event: React.FormEvent) => {
-    event.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
     setLoading(true);
     setError(null);
-
     try {
-      const response = await fetch('/api/login', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
+      const res = await fetch("/api/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
       });
-
-      const data = await response.json();
-
-      if (response.ok) {
-        // ✅ Sauvegarder le token dans localStorage
-        localStorage.setItem('authToken', data.token);
-
-        // ✅ Rediriger vers la page de profil
-        router.push('/profile');
+      const data = await res.json();
+      if (res.ok) {
+        localStorage.setItem("authToken", data.token);
+        router.push("/profile");
       } else {
-        setError(data.message || 'Erreur lors de la connexion');
+        setError(data.message || "Erreur lors de la connexion");
       }
-    } catch (error) {
-      console.error('Erreur lors de la connexion:', error);
-      setError('Erreur lors de la connexion');
+    } catch {
+      setError("Erreur lors de la connexion");
     } finally {
       setLoading(false);
     }
   };
 
   return (
-    <main className="mainPage">
-      <div className="header">
-        <h1 className="welcome">Connexion à votre compte</h1>
+    <div className="auth-page">
+      <div className="auth-card">
+        <div className="auth-logo">🧠</div>
+        <h1>Connexion</h1>
+        <p className="auth-subtitle">Content de te revoir !</p>
+
+        {error && <div className="form-error">⚠ {error}</div>}
+
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label className="form-label" htmlFor="email">
+              Adresse email
+            </label>
+            <input
+              className="form-input"
+              type="email"
+              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="you@example.com"
+              required
+            />
+          </div>
+
+          <div className="form-group">
+            <label className="form-label" htmlFor="password">
+              Mot de passe
+            </label>
+            <input
+              className="form-input"
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="••••••••"
+              required
+            />
+          </div>
+
+          <button
+            type="submit"
+            className="btn btn-primary btn-full"
+            disabled={loading}
+            style={{ marginTop: "8px" }}
+          >
+            {loading ? "Connexion…" : "Se connecter"}
+          </button>
+        </form>
+
+        <p className="auth-footer">
+          Pas encore de compte ?{" "}
+          <Link href="/signup">Créer un compte</Link>
+        </p>
       </div>
-
-      <div className="login-container">
-        <div className="login-box">
-          {error && <p className="error-message">{error}</p>}
-
-          <form onSubmit={handleSubmit}>
-            <div className="input-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-
-            <div className="input-group">
-              <label htmlFor="password">Mot de passe</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-            </div>
-
-            <button type="submit" disabled={loading} className="submit-btn">
-              {loading ? 'Chargement...' : 'Se connecter'}
-            </button>
-          </form>
-        </div>
-      </div>
-
-      <div>
-        <button className="retour" onClick={() => router.push("/")}>
-          Retour
-        </button>
-      </div>
-    </main>
+    </div>
   );
 }

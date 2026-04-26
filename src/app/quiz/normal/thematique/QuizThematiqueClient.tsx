@@ -8,41 +8,59 @@ type Question = {
   answer: string;
 };
 
-export default function QuizThematiqueClient({ questions }: { questions: Question[] }) {
+export default function QuizThematiqueClient({
+  questions,
+}: {
+  questions: Question[];
+}) {
   const router = useRouter();
-  const [index, setIndex] = useState(Math.floor(Math.random() * questions.length));
+  const [index, setIndex] = useState(() =>
+    Math.floor(Math.random() * questions.length)
+  );
   const [showAnswer, setShowAnswer] = useState(false);
 
   const next = () => {
-    const randomIndex = Math.floor(Math.random() * questions.length);
-    setIndex(randomIndex);
+    setIndex(Math.floor(Math.random() * questions.length));
     setShowAnswer(false);
   };
 
   return (
-    <main style={{ padding: "2rem" }}>
-      <div className="header">
-        <h1>Quiz thématique</h1>
-      </div>
-      <div className="back-quiz">
-        <div className="quiz-container">
-          <h2 className="quiz-question">{questions[index].question}</h2>
+    <div className="page">
+      <div className="page-content">
+        <button
+          className="back-btn"
+          onClick={() => router.push("/quiz/normal")}
+        >
+          ← Retour
+        </button>
+
+        <div className="quiz-header">
+          <span className="quiz-mode-badge">📚 Quiz Thématique</span>
+        </div>
+
+        <div className="quiz-card animate-in">
+          <p className="quiz-question-text">{questions[index].question}</p>
 
           {showAnswer ? (
-            <p><strong>{questions[index].answer}</strong></p>
+            <div className="reveal-block">{questions[index].answer}</div>
           ) : (
-            
-            <button className="quiz-buttons answer" onClick={() => setShowAnswer(true)}>Afficher la réponse</button>
-            
+            <div className="answer-grid">
+              <button
+                className="btn btn-primary btn-full"
+                onClick={() => setShowAnswer(true)}
+              >
+                Afficher la réponse
+              </button>
+            </div>
           )}
-          
-          <button className="quiz-buttons next" onClick={next}>Question suivante</button>
-          
+
+          <div className="quiz-actions">
+            <button className="btn btn-outline" onClick={next}>
+              Question suivante →
+            </button>
+          </div>
         </div>
       </div>
-      <div>
-        <button className="retour" onClick={() => router.push("/quiz/normal")}> Retour </button>
-      </div>
-    </main>
+    </div>
   );
 }

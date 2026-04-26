@@ -3,8 +3,6 @@
 import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
 
-// Types
-
 type Question = {
   question: string;
   answer1: string;
@@ -14,152 +12,203 @@ type Question = {
   answer: string;
 };
 
-export default function QuizRapideClient({ questions }: { questions: Question[] }) {
-  const router = useRouter();
-  if (!questions || questions.length === 0) {
-    return <div>Chargement des questions échoué ou vide.</div>;
-  }  
+const LETTERS = ["A", "B", "C", "D"];
+const TOTAL_TIME = 60;
+const CIRCUMFERENCE = 2 * Math.PI * 30; // radius = 30
 
-  const [index, setIndex] = useState(() => Math.floor(Math.random() * questions.length));
+export default function QuizRapideClient({
+  questions,
+}: {
+  questions: Question[];
+}) {
+  const router = useRouter();
+
+  if (!questions || questions.length === 0) {
+    return (
+      <div className="loading-screen">
+        <div className="loading-spinner" />
+        <p>Chargement des questions…</p>
+      </div>
+    );
+  }
+
+  const [index, setIndex] = useState(() =>
+    Math.floor(Math.random() * questions.length)
+  );
   const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
   const [shuffledAnswers, setShuffledAnswers] = useState<string[]>([]);
   const [score, setScore] = useState(0);
-  const [timeLeft, setTimeLeft] = useState(60); // 60 secondes
+  const [timeLeft, setTimeLeft] = useState(TOTAL_TIME);
   const [isFinished, setIsFinished] = useState(false);
   const [wrongCount, setWrongCount] = useState(0);
+  const prevScoreRef = useRef<number>(0);
+  const prevWrongRef = useRef<number>(0);
 
-  // On garde l'ancien score pour calculer la différence
-  const prevScoreRef = useRef<number>(score);
-  const prevWrongRef = useRef<number>(wrongCount);
-
-  // Shuffle les réponses à chaque nouvelle question
   useEffect(() => {
-    const shuffled = shuffleAnswers(index);
-    setShuffledAnswers(shuffled);
+    setShuffledAnswers(shuffleAnswers(index));
   }, [index]);
 
-  // Timer
   useEffect(() => {
     if (isFinished) return;
-    if (timeLeft === 0) {
-      setIsFinished(true);
-      return;
-    }
-    const timer = setTimeout(() => setTimeLeft((t) => t - 1), 1000);
-    return () => clearTimeout(timer);
+    if (timeLeft === 0) { setIsFinished(true); return; }
+    const t = setTimeout(() => setTimeLeft((n) => n - 1), 1000);
+    return () => clearTimeout(t);
   }, [timeLeft, isFinished]);
 
   useEffect(() => {
     if (!isFinished) return;
-  
     const token = localStorage.getItem("authToken");
     if (!token) return;
-
     const deltaGood = score - prevScoreRef.current;
     const deltaBad = wrongCount - prevWrongRef.current;
-
     if (deltaGood === 0 && deltaBad === 0) return;
-
-    const updateStats = async () => {
-      try {
-        await fetch("/api/stats", {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-          body: JSON.stringify({
-            goodAnswers: deltaGood,
-            badAnswers: deltaBad,
-          }),
-        });
-
-        // Mise à jour des références
+    fetch("/api/stats", {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({ goodAnswers: deltaGood, badAnswers: deltaBad }),
+    })
+      .then(() => {
         prevScoreRef.current = score;
         prevWrongRef.current = wrongCount;
-
-      } catch (error) {
-        console.error("Erreur mise à jour stats :", error);
-      }
-    };
-
-    updateStats();
+      })
+      .catch((e) => console.error("Erreur stats :", e));
   }, [isFinished, score]);
 
   function shuffleAnswers(idx: number): string[] {
-    const answers = [
+    return [
       questions[idx].answer1,
       questions[idx].answer2,
       questions[idx].answer3,
       questions[idx].answer4,
-    ];
-    return answers.sort(() => Math.random() - 0.5);
+    ].sort(() => Math.random() - 0.5);
   }
 
-const handleAnswerClick = (answer: string) => {
-  if (selectedAnswer !== null) return;
-  setSelectedAnswer(answer);
-  if (answer === questions[index].answer) {
-    setScore((s) => s + 1);
-  } else {
-    setWrongCount((w) => w + 1);
-  }
-  setTimeout(() => {
-    const nextIndex = Math.floor(Math.random() * questions.length);
-    setIndex(nextIndex);
-    setSelectedAnswer(null);
-  }, 500);
-};
+  const handleAnswer = (answer: string) => {
+    if (selectedAnswer !== null) return;
+    setSelectedAnswer(answer);
+    if (answer === questions[index].answer) {
+      setScore((s) => s + 1);
+    } else {
+      setWrongCount((w) => w + 1);
+    }
+    setTimeout(() => {
+      const next = Math.floor(Math.random() * questions.length);
+      setIndex(next);
+      setSelectedAnswer(null);
+    }, 500);
+  };
 
+  const isCorrect = (ans: string) => ans === questions[index].answer;
 
-  const isCorrect = (answer: string) => answer === questions[index].answer;
+  const dashOffset =
+    CIRCUMFERENCE * (1 - timeLeft / TOTAL_TIME);
+  const isUrgent = timeLeft <= 10;
 
   if (isFinished) {
     return (
-      <main style={{ padding: "2rem" }}>
-        <div className="header">
-          <h1>Quiz rapide - Temps écoulé !</h1>
-          <p>Score final : {score}</p>
+      <div className="page">
+        <div className="page-content">
+          <div className="gameover-card">
+            <div className="gameover-emoji">⏱️</div>
+            <h2 className="gameover-title">Temps écoulé !</h2>
+            <div className="gameover-score-value">{score}</div>
+            <p className="gameover-score-label">bonnes réponses</p>
+            <div className="gameover-actions">
+              <button
+                className="btn btn-primary"
+                onClick={() => {
+                  setScore(0);
+                  setWrongCount(0);
+                  setTimeLeft(TOTAL_TIME);
+                  setIsFinished(false);
+                  setSelectedAnswer(null);
+                  const idx = Math.floor(Math.random() * questions.length);
+                  setIndex(idx);
+                  setShuffledAnswers(shuffleAnswers(idx));
+                  prevScoreRef.current = 0;
+                  prevWrongRef.current = 0;
+                }}
+              >
+                Rejouer
+              </button>
+              <button
+                className="btn btn-outline"
+                onClick={() => router.push("/quiz")}
+              >
+                Autres modes
+              </button>
+            </div>
+          </div>
         </div>
-        <button className="retour" onClick={() => router.push("/quiz/normal")}>Retour</button>
-      </main>
+      </div>
     );
   }
-  
 
   return (
-    <main style={{ padding: "2rem" }}>
-      <div className="header">
-        <h1>Quiz rapide</h1>
-        <p>Temps restant : {timeLeft}s | Score : {score}</p>
-      </div>
-      <div className="back-quiz">
-        <div className="quiz-container">
-          <h2 className="quiz-question">{questions[index].question}</h2>
+    <div className="page">
+      <div className="page-content">
+        <button className="back-btn" onClick={() => router.push("/quiz")}>
+          ← Retour
+        </button>
 
-          {shuffledAnswers.map((ans, i) => (
-            <button
-              key={i}
-              className={`quiz-answer-button ${
-                selectedAnswer
-                  ? isCorrect(ans)
-                    ? "correct"
-                    : selectedAnswer === ans
-                    ? "incorrect"
+        <div className="quiz-header">
+          <span className="quiz-mode-badge">⚡ Quiz Rapide</span>
+          <div className="quiz-score-group">
+            <span className="score-pill good">✓ {score}</span>
+            <span className="score-pill bad">✗ {wrongCount}</span>
+            <div className="timer-wrap">
+              <svg className="timer-svg" viewBox="0 0 68 68">
+                <circle
+                  className="timer-track"
+                  cx="34"
+                  cy="34"
+                  r="30"
+                />
+                <circle
+                  className={`timer-ring${isUrgent ? " urgent" : ""}`}
+                  cx="34"
+                  cy="34"
+                  r="30"
+                  strokeDasharray={CIRCUMFERENCE}
+                  strokeDashoffset={dashOffset}
+                />
+              </svg>
+              <div className={`timer-label${isUrgent ? " urgent" : ""}`}>
+                {timeLeft}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="quiz-card animate-in">
+          <p className="quiz-question-text">{questions[index].question}</p>
+
+          <div className="answer-grid">
+            {shuffledAnswers.map((ans, i) => (
+              <button
+                key={i}
+                className={`answer-btn${
+                  selectedAnswer
+                    ? isCorrect(ans)
+                      ? " correct"
+                      : selectedAnswer === ans
+                      ? " incorrect"
+                      : ""
                     : ""
-                  : ""
-              }`}
-              onClick={() => handleAnswerClick(ans)}
-              disabled={selectedAnswer !== null}
-            >
-              {ans}
-            </button>
-          ))}
+                }`}
+                onClick={() => handleAnswer(ans)}
+                disabled={selectedAnswer !== null}
+              >
+                <span className="answer-letter">{LETTERS[i]}</span>
+                {ans}
+              </button>
+            ))}
+          </div>
         </div>
       </div>
-      <div>
-        <button className="retour" onClick={() => router.push("/quiz")}>Retour</button>
-      </div>
-    </main>
+    </div>
   );
 }
