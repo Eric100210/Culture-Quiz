@@ -18,18 +18,21 @@ export default function Home() {
       icon: "🎯",
       title: "Quiz Classique",
       desc: "À ton propre rythme",
+      path: "/quiz/normal",
     },
     {
       id: "rapid",
       icon: "⚡",
       title: "Quiz Rapide",
       desc: "60 secondes chrono",
+      path: "/quiz/rapid",
     },
     {
       id: "endurance",
       icon: "🔥",
       title: "Quiz Endurance",
       desc: "Une erreur et c'est fini",
+      path: "/quiz/endurance",
     },
   ];
 
@@ -90,11 +93,11 @@ export default function Home() {
         <p className="hero-divider">Trois modes de jeu</p>
 
         <div className="hero-features">
-          {modes.map(({ id, icon, title, desc }) => (
+          {modes.map(({ id, icon, title, desc, path }) => (
             <div
               key={id}
               className="hero-feature-card"
-              onClick={() => router.push("/quiz")}
+              onClick={() => router.push(path)}
             >
               <div className="hero-feature-icon">{icon}</div>
               <h3>{title}</h3>
