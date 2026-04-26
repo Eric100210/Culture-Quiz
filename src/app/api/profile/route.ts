@@ -4,7 +4,7 @@ import jwt from 'jsonwebtoken';
 import pool from '@/lib/db';
 import bcrypt from 'bcrypt';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'supersecretkey';
+const JWT_SECRET = process.env.JWT_SECRET!;
 
 export async function GET(req: NextRequest) {
   try {

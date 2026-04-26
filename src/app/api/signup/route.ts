@@ -3,7 +3,7 @@ import pool from '../../../lib/db';  // Importe le pool de connexions
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'supersecretkey';
+const JWT_SECRET = process.env.JWT_SECRET!;
 
 export async function POST(req: NextRequest) {
   const { username, email, password } = await req.json();

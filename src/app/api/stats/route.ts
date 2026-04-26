@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import pool from '../../../lib/db';
 import jwt from 'jsonwebtoken';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'supersecretkey';
+const JWT_SECRET = process.env.JWT_SECRET!;
 
 function getUserIdFromToken(req: NextRequest): number | null {
   const token = req.headers.get('authorization')?.split(' ')[1];

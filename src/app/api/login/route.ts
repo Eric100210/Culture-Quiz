@@ -3,7 +3,7 @@ import pool from '../../../lib/db';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'supersecretkey';  // Assure-toi que cette clé est stockée en sécurité
+const JWT_SECRET = process.env.JWT_SECRET!;
 
 export async function POST(req: NextRequest) {
   try {
