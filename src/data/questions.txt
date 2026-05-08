@@ -135,5 +135,5 @@ Quel animal a été le premier être vivant à être envoyé en orbite autour de
 Quel dramaturge français a comme véritable identité Jean-Baptiste Poquelin ? ; Molière ; Jean Racine ; Corneille ; Voltaire ; Molière
 De quel groupe de musique Chris Martin est-il le membre ? ; Coldplay ; Muse ; Radiohead ; Arctic Monkeys ; Coldplay
 En France, quelle est la première femme à devenir Première Ministre en 1991 ? ; Edith Cresson ; Martine Aubry ; Michèle Alliot-Marie ; Florence Parly ; Edith Cresson
-Comment s'appelle la mère de Saint Louis (Louis IX) ? Aliénor d'Aquitaine ; Blanche de Castille ; Anne de Bretagne ; Catherine de Médicis ; Blanche de Castille
-Qui fut le biographe de Saint Louis, le suivant au quotidien et participant à sa canonisation en offrant un récit détaillé de sa vie ? ; Jean Chartier ; Jean de Joinville ; Jean Froissart ; François Villon
+Comment s'appelle la mère de Saint Louis (Louis IX) ? ; Aliénor d'Aquitaine ; Blanche de Castille ; Anne de Bretagne ; Catherine de Médicis ; Blanche de Castille
+Qui fut le biographe de Saint Louis, le suivant au quotidien et participant à sa canonisation en offrant un récit détaillé de sa vie ? ; Jean Chartier ; Jean de Joinville ; Jean Froissart ; François Villon ; Jean de Joinville
