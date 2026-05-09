@@ -130,7 +130,7 @@ def validate_and_save(questions: list[dict]) -> None:
     print(f"  Manual validation — {len(questions)} question(s) to review")
     print(f"{'─' * 60}\n")
 
-    with open(QUESTIONS_FILE, "a", encoding="utf-8") as f:
+    with open(QUESTIONS_FILE, "a+", encoding="utf-8") as f:
         # Ensure the file ends with a newline before appending
         f.seek(0, 2)
         if f.tell() > 0:

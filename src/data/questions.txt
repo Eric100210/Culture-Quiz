@@ -137,3 +137,10 @@ De quel groupe de musique Chris Martin est-il le membre ? ; Coldplay ; Muse ; Ra
 En France, quelle est la première femme à devenir Première Ministre en 1991 ? ; Edith Cresson ; Martine Aubry ; Michèle Alliot-Marie ; Florence Parly ; Edith Cresson
 Comment s'appelle la mère de Saint Louis (Louis IX) ? ; Aliénor d'Aquitaine ; Blanche de Castille ; Anne de Bretagne ; Catherine de Médicis ; Blanche de Castille
 Qui fut le biographe de Saint Louis, le suivant au quotidien et participant à sa canonisation en offrant un récit détaillé de sa vie ? ; Jean Chartier ; Jean de Joinville ; Jean Froissart ; François Villon ; Jean de Joinville
+Dans quel ville se trouve le Taj Mahal ? ; Agra ; Jaipur ; Calcutta ; Bombay ; Agra
+Quel sculpteur a réalisé la statue du Penseur ? ; Auguste Rodin ; Michel-Ange ; Alberto Giacometti ; Louise Bourgeois ; Auguste Rodin
+En quelle année a été lancé le TGV en France ? ; 1981 ; 1991 ; 1971 ; 1988 ; 1981
+Comment appelle-t-on la femelle du sanglier ? ; La laie ; La marcassin ; La truie ; La sanglière ; La laie
+Quel est le nom du président américain qui a déclenché la guerre en Irak en 2003 ? ; George W. Bush ; Barack Obama ; Donald Trump ; Bill Clinton ; George W. Bush
+Quel est le nom du dictateur chilien qui a dirigé le pays de 1973 à 1990 ? ; Augusto Pinochet ; Gurbanguly Berdimuhamedow ; Alexandre Loukachenko ; Fransisco Franco ; Augusto Pinochet
+Quel est le nom de la première femme à être allé dans l'espace, en 1963 ? ; Mae Jemison ; Valentina Tereshkova ; Peggy Whitson ; Sally Ride ; Valentina Tereshkova
