@@ -19,7 +19,7 @@ export async function GET(req: NextRequest) {
     // Ici, on récupère les données à jour depuis la base
     const client = await pool.connect();
     try {
-      const res = await client.query('SELECT id, email, username, age, country, bio FROM users WHERE id = $1', [decoded.id]);
+      const res = await client.query('SELECT id, email, username, age, country, bio, avatar_url FROM users WHERE id = $1', [decoded.id]);
 
       if (res.rows.length === 0) {
         return NextResponse.json({ message: 'Utilisateur non trouvé' }, { status: 404 });
