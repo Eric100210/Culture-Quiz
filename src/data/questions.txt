@@ -160,3 +160,15 @@ De quelle couleur est la boite noire dans un avion ? ; Orange ; Noire ; Bleue ; 
 Combien de pattes possèdent une fourmi ? ; 6 pattes ; 10 pattes ; 4 pattes ; 8 pattes ; 6 pattes
 Dans quelle ville a été créé le premier métro du monde ? ; Londres ; Paris ; Washington ; Berlin ; Londres
 Que collectionne un capéophile ? ; Des chapeaux ; Des capes ; Des objets de voiture ; Des tire-bouchons ; Des chapeaux
+De quel pays est originaire le Mojito ? ; Cuba ; Brésil ; Argentine ; Italie ; Cuba
+Quel est le pays le plus peuplé de l’Union Européenne ? ; L’Allemagne ; La France ; L’Italie ; L’Espagne ; L’Allemagne
+Quel mot venu de l'espagnol désigne le petit du Lama ? ; Le Cria ; Le Potro ; Le Joto ; Le Lamo ; Le Cria
+Quel est le nom du navire qui a transporté Christophe Colomb lors de son premier voyage en Amérique en 1492 ? ; Le Belem ; La Santa Maria ; La Victoria ; Le Vasa ; La Santa Maria
+Quelle est la durée maximale d’un mandat présidentiel aux Etats-Unis ? ; 2 fois 4 ans ; 1 fois 4 ans ; 3 fois 4 ans ; Il n’y a pas de durée maximale ; 2 fois 4 ans
+Qu’est ce que la Myticulture ? ; L’élevage de moules ; L’élevage d’huitres ; L’élevage de coquilles St Jacques ; L’élevage d’Oursins ; L’élevage de moules
+Avant de devenir la première dame des États-Unis, quel métier exerçait Michelle Obama ? ; Avocate ; Infirmière ; Dirigeante d’entreprise ; Professeure ; Avocate
+Quelle superficie représente un Hectare ? ; 100 m2 ; 1 000 m2 ; 10 000 m2 ; 100 000 m2 ; 100 m2
+Quel bâteau le pirate Barbe Noire a-t-il volé en 1717, le renommant le Queen Anne's Revenge ? ; Le Mayflower ; La Concorde ; Le Vasa ; Le HMS Victory ; La Concorde
+Qui fut le premier homme à atteindre le pôle sud, en 1911 ? ; James Cook ; Roald Amundsen ; Robert Peary ; Jacob Roggeveen ; Roald Amundsen
+En quelle année la première sonde spatiale a-t-elle réussi à envoyer des photos de Mars depuis le sol martien ? ; 1970 ; 1976 ; 1982 ; 1986 ; 1976
+En quelle année la première sonde spatiale a-t-elle réussi à envoyer des photos de la Lune depuis le sol lunaire ? ; 1957 ; 1962 ; 1966 ; 1968 ; 1966
