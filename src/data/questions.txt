@@ -183,5 +183,11 @@ Sur quelle ville ont régné les Médicis pendant plusieurs siècles ? ; Florenc
 Quel pays est limitrophe de Brunei ? ; Malaisie ; Arabie-Saoudite ; Indonésie ; Cambodge ; Malaisie
 Quel est le seul oiseau au monde à savoir voler en arrière ? ; Le colibri ; Le flamant rose ; Le martin-pêcheur ; L'hirondelle ; Le colibri
 Quel architecte français représente le style Art nouveau ? ; Haussmann ; Le Corbusier ; Hector Guimard ; Charles Garnier ; Hector Guimard
-Dans quel poème épique anglo-saxon apparaît le monstre Grendel ? ; L'Odyssée ; Beowulf ; La Chanson de Roland ; L'Énéide ; Beowulf
+Dans quel poème épique apparaît le monstre Grendel ? ; L'Odyssée ; Beowulf ; La Chanson de Roland ; L'Énéide ; Beowulf
 Quel fort du Kentucky abrite la réserve d'or américain ? ; Fort Knox ; Fort Dix ; Fort Adams ; Fort Bliss ; Fort Knox
+Combien y a t-il d’étoiles sur le drapeau européen ? ; 12 ; 21 ; 27 ; 8 ; 12
+Combien d’états composent les Etats-Unis ? ; 50 ; 49 ; 51 ; 52 ; 50
+Comment se nomme le petit du corbeau ? ; Le Corbillat ; Le Corbeaunot ; Le Cabot ; Le Coinquot ; Le Corbillat
+Quel auteur est le père du personnage « Gaston Lagaffe » ? ; Franquin ; Hergé ; Zep ; Piem ; Franquin
+En hommage à quelle épreuve sportive le Paris-Brest a t-il été créé ? ; Une course cycliste ; Une course à pied ; Une course d’orientation ; Une course de voiture ; Une course cycliste
+En quelle année Martin Luther King a t-il été assassiné ? ; 1968 ; 1957 ; 1963 ; 1978 ; 1968
