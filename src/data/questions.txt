@@ -175,7 +175,7 @@ En quelle année la première sonde spatiale a-t-elle réussi à envoyer des pho
 En quelle année Yannick Noah a-til remporté Roland Garros ? ; 1983 ; 1980 ; 1975 ; 1988 ; 1983
 Dans quel état Américain se trouve « Las Vegas » ? ; Le Nevada ; La Floride ; L’Alabama ; New-York ; Le Nevada
 Sur quel mont se trouve la source de la Loire ? ; Mont Gerbier de Jonc ; Mont Ventoux ; Mont Aigoual ; Mont Blanc ; Mont Gerbier de Jonc
-Quelle reine a été reine de France puis reine d’Angleterre ? ; Aliénor d’Aquitaine ; Marie Stuart ; Mary Tudor ; Catherine de Médicis ; Aliénor d’Aquitaine
+Quelle reine a été reine de France puis reine d’Angleterre ? ; Aliénor d’Aquitaine ; Marie Stuart ; Mary Tudor ; Catherine de Médicis ; Aliénor d’Aquitaine ; Elle épouse Louis VII en 1137 et est reine de France pendant 15 ans. Leur mariage est annulé en 1152 car ils n'ont pas d'héritier, et elle épouse Henri II Plantagenêt, couronné roi d'Angleterre en 1154.
 A quel âge est mort Wolfgang Amadeus Mozart ? ; 35 ans ; 45 ans ; 25 ans ; 55 ans ; 35 ans
 Dans quelle ville italienne se déroule la pièce de Théâtre « Roméo et Juliette » ? ; Vérone ; Florence ; Rome ; Turin ; Vérone
 De quel animal la hase est-elle la femelle ? ; Le lièvre ; Le lapin ; Le sanglier ; Le renard ; Le lièvre
@@ -183,7 +183,7 @@ Sur quelle ville ont régné les Médicis pendant plusieurs siècles ? ; Florenc
 Quel pays est limitrophe de Brunei ? ; Malaisie ; Arabie-Saoudite ; Indonésie ; Cambodge ; Malaisie
 Quel est le seul oiseau au monde à savoir voler en arrière ? ; Le colibri ; Le flamant rose ; Le martin-pêcheur ; L'hirondelle ; Le colibri
 Quel architecte français représente le style Art nouveau ? ; Haussmann ; Le Corbusier ; Hector Guimard ; Charles Garnier ; Hector Guimard
-Dans quel poème épique apparaît le monstre Grendel ? ; L'Odyssée ; Beowulf ; La Chanson de Roland ; L'Énéide ; Beowulf
+Dans quel poème épique apparaît le monstre Grendel ? ; L'Odyssée ; Beowulf ; La Chanson de Roland ; L'Énéide ; Beowulf ; Beowulf est un poème épique de plus de 3000 vers, écrit en ancien anglais, sûrement entre les années 700 et 1000. Il fut longtemps oublié mais va exercer une très grande infleunce sur J.R.R. Tolkien, qui lui consacre un essai et s'en inspire pour le Seigneur des Anneaux.
 Quel fort du Kentucky abrite la réserve d'or américain ? ; Fort Knox ; Fort Dix ; Fort Adams ; Fort Bliss ; Fort Knox
 Combien y a t-il d’étoiles sur le drapeau européen ? ; 12 ; 21 ; 27 ; 8 ; 12
 Combien d’états composent les Etats-Unis ? ; 50 ; 49 ; 51 ; 52 ; 50 ; Depuis la création des Etats-Unis, le nombre d'états est passé de 13 à 50. Les derniers états à avoir adhéré à l'Union sont l'Alaska et Hawaï, tous deux en 1959.
