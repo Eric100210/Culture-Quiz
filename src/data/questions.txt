@@ -118,7 +118,7 @@ Combien d'années a duré le règne de Ramsès II ? ; 45 ans ; 66 ans ; 54 ans ;
 Qui a fondé Carthage selon la tradition antique ? ; Hannibal ; Hamilcar ; La reine Didon ; Hasdrubal ; La reine Didon
 Quel peuple de l'Antiquité a inventé la monnaie sous forme de pièces métalliques ? ; Les Lydiens ; Les Phéniciens ; Les Grecs ; Les Perses ; Les Lydiens
 Comment s'appelle l'alliage or/argent utilisé pour les premières pièces de monnaie lydiennes ? ; Bronze ; Laiton ; Électrum ; Billon ; Électrum
-Lors de quelle Alexandre le Grand l'emporte-t-il définitivement sur l'empire perse de Darius III ? ; Gaugamélès ; Issos ; Marathon ; Platées ; Gaugamélès
+Lors de quelle bataille Alexandre le Grand l'emporte-t-il définitivement sur l'empire perse de Darius III ? ; Gaugamélès ; Issos ; Marathon ; Platées ; Gaugamélès
 Comment s'appelait l'épouse d'Alexandre le Grand, fille d'un noble de Bactriane ? ; Stateira ; Parysatis ; Barsine ; Roxane ; Roxane
 Qui a posé les fondements de la démocratie athénienne en instaurant l'isonomie ? ; Dracon ; Solon ; Clisthène ; Périclès ; Clisthène
 À quelle bataille navale les Grecs ont-ils infligé une défaite décisive aux Perses en -480 av. J.-C. ? ; Platées ; Salamine ; Marathon ; Thermopyles ; Salamine
@@ -193,3 +193,15 @@ En hommage à quelle épreuve sportive le Paris-Brest a t-il été créé ? ; Un
 En quelle année Martin Luther King a t-il été assassiné ? ; 1968 ; 1957 ; 1963 ; 1978 ; 1968
 A partir de quel sang le légendaire cheval ailé Pégase est né ? ; Zeus ; Le Cyclope ; Méduse ; Athéna ; Méduse
 En moyenne quelle est la quantité de sang dans le corps humain ? ; 5 Litres ; 3 Litres ; 8 Litres ; 11 Litres ; 5 Litres
+Que trouve t-on dans le Palais Bourbon à Paris ? ; L’Assemblée Nationale ; Le Sénat ; L’Ambassade Américaine ; Le Ministère des finances ; L’Assemblée Nationale
+De quelle constellation Sirius est-elle l'étoile principale ? ; Orion ; Le Grand chien ; Hercule ; Le dragon ; Le Grand chien
+De quelle maladie Dostoïevski souffrait-il, tout comme son personnage Smerdiakov dans les Frères Karamazov ? ; Epilepsie ; Tuberculose ; Schizophrénie ; Parkinson ; Epilepsie
+En quel animal Zeus se transforma-t-il pour séduire la princesse Europe ? ; Un cygne ; Un aigle ; Un cheval ; Un taureau ; Un taureau
+Quel était le vrai nom du Minotaure dans la mythologie grecque ? ; Minos ; Talos ; Cerbère ; Astérion ; Astérion
+Quel personnage de la mythologie grecque fait traverser le fleuve Styx aux âmes des morts ? ; Hadès ; Hermès ; Cerbère ; Charon ; Charon
+Quelle pièce de monnaie les Grecs plaçaient-ils dans la bouche des défunts pour payer Charon ? ; Un drachme ; Une mine ; Un talent ; Une obole ; Une obole
+Quel fleuve des Enfers sépare le monde des vivants de celui des morts dans la mythologie grecque ? ; Le Cocyte ; Le Léthé ; L'Achéron ; Le Styx ; Le Styx
+Quelle déesse grecque est la mère de Perséphone ? ; Héra ; Athéna ; Artémis ; Déméter ; Déméter
+Quel fruit Perséphone a-t-elle consommé aux Enfers, la condamnant à y séjourner une partie de l'année ? ; Une figue ; Une pomme ; Des raisins ; Une grenade ; Une grenade
+Quel est le tableau le plus célèbre de Jérôme Bosch ? ; La Tentation de Saint-Antoine ; Le Jugement Dernier ; Le Chariot de foin ; Le Jardin des délices ; Le Jardin des délices
+Dans la mythologie grecque, comment s'appelles les trois déesses de la destinée humaine, décidant de la naissance, du déroulement de la vie et de la mort en tissant un fil ? ; Les moires ; Les dryades ; Les nymphes ; Les nornes ; Les moires
