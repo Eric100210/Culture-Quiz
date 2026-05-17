@@ -10,6 +10,7 @@ type Question = {
   answer3: string;
   answer4: string;
   answer: string;
+  explanation?: string;
 };
 
 const LETTERS = ["A", "B", "C", "D"];
@@ -128,6 +129,10 @@ export default function QuizQAClient({
               </button>
             ))}
           </div>
+
+          {selectedAnswer && questions[index].explanation && (
+            <p className="quiz-explanation">{questions[index].explanation}</p>
+          )}
 
           <div className="quiz-actions">
             <button

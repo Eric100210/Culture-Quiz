@@ -9,6 +9,7 @@ export type Question = {
   answer3: string;
   answer4: string;
   answer: string;
+  explanation?: string;
 };
 
 export function loadQuestionsQA(): Question[] {
@@ -16,7 +17,8 @@ export function loadQuestionsQA(): Question[] {
   const raw = fs.readFileSync(filePath, "utf-8");
 
   return raw.split("\n").map((line) => {
-    const [question, answer1, answer2, answer3, answer4, answer] = line.split(" ; ");
+    const parts = line.split(" ; ");
+    const [question, answer1, answer2, answer3, answer4, answer, explanation] = parts;
     return {
       question: question.trim(),
       answer1: answer1.trim(),
@@ -24,6 +26,7 @@ export function loadQuestionsQA(): Question[] {
       answer3: answer3.trim(),
       answer4: answer4.trim(),
       answer: answer.trim(),
+      ...(explanation ? { explanation: explanation.trim() } : {}),
     };
   });
 }
