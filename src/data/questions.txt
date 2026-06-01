@@ -9,7 +9,6 @@ Sur quel mont Moïse a-t-il reçu les instructions pour construire l’arche d�
 Dans quelle constellation se situe l’apex vers lequel se dirige le système solaire ? ; Hercule ; Bouvier ; Orion ; Taureau ; Hercule
 En quelle année l'arrêt Bosman a-t-il été rendu ? ; 1995 ; 1990 ; 1985 ; 1980 ; 1995
 Qui est l’auteur du traité "L’art de la guerre" ? ; Sun Tzu ; Maquiavel ; Montesquieu ; Clausewitz ; Sun Tzu
-Quelle était la capitale de l’Assyrie ? ; Ninive ; Babylone ; Ur ; Lagash ; Ninive
 Comment appelle-t-on une attaque visant à saturer un serveur avec de nombreuses requêtes ? ; DDOS ; Brute Force ; Phishing ; Ransomware ; DDOS
 Quelle molécule hallucinogène est présente dans l’ayahuasca ? ; DMT ; PSV ; LSD ; Psylocibine ; DMT
 Quel roi babylonien a détruit le Temple de Salomon ? ; Nabuchodonosor ; Hammurabi ; Cyrus ; Nebucadnetsar ; Nabuchodonosor
