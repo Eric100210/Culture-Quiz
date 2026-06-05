@@ -79,21 +79,28 @@ function phonetize(s: string): string {
   return p;
 }
 
+// Optimal string alignment (restricted Damerau-Levenshtein):
+// counts adjacent transpositions as cost 1 instead of 2.
 function levenshtein(a: string, b: string): number {
   const m = a.length;
   const n = b.length;
-  // Use two rolling rows instead of a full matrix to save memory
+  let pprev = new Array<number>(n + 1).fill(0);
   let prev = Array.from({ length: n + 1 }, (_, j) => j);
   let curr = new Array<number>(n + 1);
   for (let i = 1; i <= m; i++) {
     curr[0] = i;
     for (let j = 1; j <= n; j++) {
-      curr[j] =
-        a[i - 1] === b[j - 1]
-          ? prev[j - 1]
-          : 1 + Math.min(prev[j], curr[j - 1], prev[j - 1]);
+      if (a[i - 1] === b[j - 1]) {
+        curr[j] = prev[j - 1];
+      } else {
+        curr[j] = 1 + Math.min(prev[j], curr[j - 1], prev[j - 1]);
+        // Transposition: a[i-1] == b[j-2] && a[i-2] == b[j-1]
+        if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) {
+          curr[j] = Math.min(curr[j], pprev[j - 2] + 1);
+        }
+      }
     }
-    [prev, curr] = [curr, prev];
+    [pprev, prev, curr] = [prev, curr, pprev];
   }
   return prev[n];
 }
