@@ -3,7 +3,7 @@ Quel est le principal pays producteur de kiwis ? ; Chine
 Comment s'appelle l'arbuste sur lequel pousse le kiwi ? ; Actinidier
 Comment s’appellent les frais bancaires liés à un découvert ? ; Agios
 Qui a composé la symphonie Ainsi Parlait Zarathoustra ? ; Strauss | Richard Strauss
-Quel homme a fondé Al-Qaïda ? ; Oussama Ben Laden
+Quel homme a fondé Al-Qaïda ? ; Oussama Ben Laden | Ben Laden
 Dans quelle ville Léonard de Vinci est-il mort ? ; Amboise
 Sur quel mont Moïse a-t-il reçu les instructions pour construire l’arche d’alliance ? ; Sinaï
 Dans quelle constellation se situe l’apex vers lequel se dirige le système solaire ? ; Hercule
@@ -12,12 +12,11 @@ Qui est l’auteur du traité "L’art de la guerre" ? ; Sun Tzu
 Comment appelle-t-on une attaque visant à saturer un serveur avec de nombreuses requêtes ? ; DDOS
 Quelle molécule hallucinogène est présente dans l’ayahuasca ? ; DMT
 Quel roi babylonien a détruit le Temple de Salomon ? ; Nabuchodonosor
-De quoi est constitué le ballast ferroviaire ? ; Pierres
 En quelle année a eu lieu la bataille d’Hernani ? ; 1830
 Quel métal extrait-on principalement de la bauxite ? ; Aluminium
 De quel pays Bismarck a-t-il oeuvré pour l'unification ? ; Allemagne
 En quelle année les États allemands s'unifient-ils pour devenir l'empire Allemand ? ; 1871
-Par qui fut fondé l'ordre cistersien ? ; Robert de Molesme
+Par qui fut fondé l'ordre cistersien ? ; Robert de Molesme | Molesme | de Molesme
 En quelle année la ville de Byzance devient-elle Constantinople (Istanbul actuelle) ? ; 330
 Qui fut le premier président de la Turquie, et fut surnommé le père des turcs ? ; Mustafa Kemal | Kemal
 En quelle année la république de Turquie fut-elle proclamée par Atatürk ? ; 1923
@@ -28,11 +27,11 @@ Quel compositeur romantique a écrit "La Damnation de Faust" ? ; Berlioz
 Quel roi a envoyé ses troupes pour tuer la Bête du Gévaudan ? ; Louis XV
 En quelle matière sont faits les billets en euros ? ; Coton
 Quel groupe djihadiste seme la terreur au Nigéria ? ; Boko Haram
-Quelle est la contenance d'une bouteille de vin Jéroboam ? ; 3L
-Quelle est la contenance d'une bouteille de vin Réhoboam ? ; 4,5L
-Quelle est la contenance d'une bouteille de vin Mathusalem ? ; 6L
-Quelle est la contenance d'une bouteille de vin Salmanazar ? ; 9L
-Quelle est la contenance d'une bouteille de vin Nabuchodonosor ? ; 15L
+Quelle est la contenance d'une bouteille de vin Jéroboam ? ; 3L | 3 | 3 L
+Quelle est la contenance d'une bouteille de vin Réhoboam ? ; 4,5L | 4,5 | 4,5 L
+Quelle est la contenance d'une bouteille de vin Mathusalem ? ; 6L | 6 | 6 L
+Quelle est la contenance d'une bouteille de vin Salmanazar ? ; 9L | 9 | 9 L
+Quelle est la contenance d'une bouteille de vin Nabuchodonosor ? ; 15L | 15 | 15L
 Quel jour du mois, chez les Romains, s'appelait 'les calendes' ? ; Le premier jour du mois | premier du mois | premier jour du mois | premier jour | premier
 En quelle année le canal de Panama a-t-il été achevé ? ; 1914
 En quelle année le canal de Suez a-t-il été inauguré ? ; 1869
@@ -45,7 +44,7 @@ Quel est le fleuve le plus long de Chine ? ; Yangtsé
 Quelle est la devise de l’Union européenne ? ; In varietate concordia
 Qui a écrit 'L’Énéide' ? ; Virgile
 Quelle organisation de financement a été créée en 1958 et se concentre sur l’énergie nucléaire ? ; Euratom
-Quel jour est célébrée la fête de l'Europe ? ; 9 mai
+Quel jour est célébrée la fête de l'Europe ? ; 9 mai | neuf mai
 Combien de fleuves des Enfers existent dans la mythologie grecque ? ; Cinq fleuves | 5 | cinq
 Quel est le nom de l’acteur et musicien anglais célèbre pour 'Space Oddity' ? ; David Bowie | Bowie
 Quel est le plus grand désert du monde ? ; L'Antarctique
