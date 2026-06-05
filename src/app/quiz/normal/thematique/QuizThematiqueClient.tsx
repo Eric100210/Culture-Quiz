@@ -11,7 +11,7 @@ type Question = {
   explanation?: string;
 };
 
-type MatchKind = "exact" | "article" | "fuzzy" | "none";
+type MatchKind = "exact" | "article" | "fuzzy" | "phonetic" | "none";
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
@@ -50,6 +50,35 @@ function stripArticle(s: string): string {
   return s;
 }
 
+/**
+ * Reduce a normalised string to a phonetic skeleton for French/European names.
+ * Handles digraphs like tch/ch/ph/qu, common vowel groups (eau/au/ai/ou), and
+ * German/Slavic conventions (w→v, ck→k, sch/tch→x). Double consonants collapse
+ * to one. The result is shorter and more stable across spelling variants.
+ */
+function phonetize(s: string): string {
+  let p = s;
+  // Multi-char digraphs — longest first to avoid partial substitution
+  p = p.replace(/sch/g, "x");
+  p = p.replace(/tch/g, "x");
+  p = p.replace(/ph/g, "f");
+  p = p.replace(/ch/g, "x");
+  p = p.replace(/ck/g, "k");
+  p = p.replace(/qu/g, "k");
+  p = p.replace(/gn/g, "n");
+  // Vowel groups
+  p = p.replace(/eau/g, "o");
+  p = p.replace(/au/g, "o");
+  p = p.replace(/ai|ei/g, "e");
+  p = p.replace(/ou/g, "u");
+  // Single-char equivalences
+  p = p.replace(/w/g, "v");
+  p = p.replace(/y/g, "i");
+  // Collapse doubled consonants
+  p = p.replace(/([bcdfghjklmnpqrstvxz])\1+/g, "$1");
+  return p;
+}
+
 function levenshtein(a: string, b: string): number {
   const m = a.length;
   const n = b.length;
@@ -81,12 +110,16 @@ function levenshtein(a: string, b: string): number {
  *  4. Both sides stripped (article on both sides differs).
  *  5. Levenshtein distance ≤ 1 between any of the four combinations above,
  *     but only for answers of length ≥ 4 (avoids false positives on short words).
+ *  6. Phonetic match: both sides are run through phonetize() and their phonetic
+ *     skeletons are within Levenshtein ≤ 1, for answers of length ≥ 5.
+ *     Catches spelling variants of proper nouns ("Tchaikovsky"/"Chaïkovski").
  *
  * Returns:
- *  - "exact"   — matched perfectly (incl. article normalisation)
- *  - "article" — matched only because an article was added/removed
- *  - "fuzzy"   — matched within 1 character of edit distance
- *  - "none"    — no match
+ *  - "exact"    — matched perfectly (incl. article normalisation)
+ *  - "article"  — matched only because an article was added/removed
+ *  - "fuzzy"    — matched within 1 character of edit distance
+ *  - "phonetic" — matched phonetically despite different spelling
+ *  - "none"     — no match
  */
 function validate(input: string, validAnswers: string[]): MatchKind {
   const ni = normalize(input);
@@ -109,7 +142,7 @@ function validate(input: string, validAnswers: string[]): MatchKind {
     if (niNoArt === naNoArt && niNoArt !== ni && naNoArt !== na)
       return "article";
 
-    // 5 – Fuzzy (Levenshtein ≤ 1)
+    // 5 – Fuzzy (Levenshtein ≤ 1 on raw forms)
     const refLen = Math.min(na.length, naNoArt.length);
     if (refLen >= 4) {
       if (
@@ -119,6 +152,21 @@ function validate(input: string, validAnswers: string[]): MatchKind {
         levenshtein(niNoArt, naNoArt) <= 1
       )
         return "fuzzy";
+    }
+
+    // 6 – Phonetic (Levenshtein ≤ 1 on phonetized skeletons)
+    if (refLen >= 5) {
+      const pi = phonetize(ni);
+      const piA = phonetize(niNoArt);
+      const pa = phonetize(na);
+      const paA = phonetize(naNoArt);
+      if (
+        (pi.length >= 4 && levenshtein(pi, pa) <= 1) ||
+        (pi.length >= 4 && levenshtein(pi, paA) <= 1) ||
+        (piA.length >= 4 && levenshtein(piA, pa) <= 1) ||
+        (piA.length >= 4 && levenshtein(piA, paA) <= 1)
+      )
+        return "phonetic";
     }
   }
 
@@ -234,9 +282,14 @@ export default function QuizThematiqueClient({
         color: "var(--danger-text)",
       };
 
-  const feedbackText = accepted
-    ? "✓ Bonne réponse !"
-    : `✗ La bonne réponse était : ${current.answers.join(" / ")}`;
+  const feedbackText =
+    matchKind === "phonetic"
+      ? `✓ Bonne réponse ! (${current.answers[0]})`
+      : matchKind === "fuzzy"
+      ? `✓ Bonne réponse ! (${current.answers[0]})`
+      : accepted
+      ? "✓ Bonne réponse !"
+      : `✗ La bonne réponse était : ${current.answers[0]}`;
 
   return (
     <div className="page">
