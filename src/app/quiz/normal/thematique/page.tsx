@@ -1,7 +1,7 @@
-import { loadQuestions } from "@/lib/loadQuestions";
+import { loadQuestionsLibre } from "@/lib/loadQuestionsLibre";
 import QuizThematiqueClient from "./QuizThematiqueClient";
 
 export default function QuizThematiquePage() {
-  const questions = loadQuestions(); // lecture via fs
+  const questions = loadQuestionsLibre();
   return <QuizThematiqueClient questions={questions} />;
 }

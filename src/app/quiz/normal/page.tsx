@@ -6,15 +6,15 @@ const modes = [
   {
     id: "qa",
     icon: "❓",
-    title: "Questions / Réponses",
+    title: "Questions à choix multiples",
     desc: "Réponds à des questions à choix multiples sur des sujets variés",
     path: "/quiz/normal/qa",
   },
   {
     id: "thematic",
-    icon: "📚",
-    title: "Quiz Thématique",
-    desc: "Découvre des explications détaillées sur de grands sujets de culture générale",
+    icon: "✏️",
+    title: "Réponse Libre",
+    desc: "Tape ta réponse sans suggestion : 10 questions par session",
     path: "/quiz/normal/thematique",
   },
 ];
