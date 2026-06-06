@@ -110,7 +110,7 @@ Comment s'appelait la capitale de l'empire hittite ? ; Hattusa
 Quel pharaon égyptien a instauré un culte du dieu Aton, similaire au monothéisme ? ; Akhenaton
 À quel âge Toutankhamon est-il mort ? ; 18 ans | 18
 Combien d'années a duré le règne de Ramsès II ? ; 66 ans | 66
-Qui a fondé Carthage selon la tradition antique ? ; La reine Didon
+Qui a fondé Carthage selon la tradition antique ? ; La reine Didon | Didon
 Quel peuple de l'Antiquité a inventé la monnaie sous forme de pièces métalliques ? ; Les Lydiens
 Comment s'appelle l'alliage or/argent utilisé pour les premières pièces de monnaie lydiennes ? ; Électrum
 Lors de quelle bataille Alexandre le Grand l'emporte-t-il définitivement sur l'empire perse de Darius III ? ; Gaugamélès
@@ -119,7 +119,6 @@ Qui a posé les fondements de la démocratie athénienne en instaurant l'isonomi
 À quelle bataille navale les Grecs ont-ils infligé une défaite décisive aux Perses en -480 av. J.-C. ? ; Salamine
 Qui commandait les Spartiates lors de la célèbre résistance aux Thermopyles ? ; Léonidas
 Quel stratège athénien fut le principal artisan de l'âge d'or d'Athènes au Ve siècle av. J.-C. ? ; Périclès
-En quelle année est né Confucius ? ; -551
 Quelle est la première bataille documentée par des sources antiques, opposant Ramsès II aux Hittites ? ; Bataille de Qadesh | Qadesh
 Quel légendaire roi phrygien transformait, selon la mythologie, tout ce qu'il touchait en or ? ; Midas
 Comment s'appelle le père d'Alexandre le Grand ? ; Philippe II
@@ -296,3 +295,12 @@ Quel cardinal, successeur de Richelieu, gouverna la France sous la régence d'An
 Quel cardinal fut le principal ministre de Louis XIII au XVIIe siècle ? ; Richelieu ; Armand Jean du Plessis de Richelieu réduisit le pouvoir des Huguenots (siège de La Rochelle, 1627-1628), lutta contre les Grands et centralisa le pouvoir royal. Il fonda également l'Académie française en 1635.
 Quel était le surnom de Marguerite de Valois, première épouse d'Henri IV de France ? ; La Reine Margot ; Marguerite de Valois (1553-1615) fut reine de Navarre puis de France. Son mariage avec Henri de Navarre eut lieu le 18 août 1572, une semaine avant le massacre de la Saint-Barthélemy. Elle est l'héroïne du roman d'Alexandre Dumas.
 Quel homme politique français proclama la République le 4 septembre 1870 et s'échappa de Paris assiégé en ballon pour organiser la résistance face aux Prussiens ? ; Léon Gambetta | Gambetta ; Gambetta s'échappa de Paris en ballon le 7 octobre 1870 pour rallier la province et organiser la défense nationale.
+Qui est le premier pilote à traverser la Manche en avion, en 1909 ? ; Louis Blériot | Blériot
+Qui fut président du Conseil en France à onze reprises sous la IIIe République, recevant en 1926 le prix Nobel de la Paix pour ses travaux en faveur de la réconciliation franco-allemande ? ; Aristide Briand | Briand
+Louis XII y établit sa cour et fit du château qui fait encore la célébrité de la ville sa résidence royale ? ; Blois
+Qui fut le premier Tsar de Russie, après avoir été Grand Prince de Moscou ? ; Ivan le Terrible | Ivan
+Comment s'appelle le personnage créé par René Goscinny qui veut être "calife à la place du calife » ? ; Iznogoud
+Quel pays actuel s'appelait autrefois les Indes orientales néerlandaises ? ; Indonésie
+Autre nom de Jacob dans la Bible, et aussi le nom d'un état depuis 1948 ; Israel
+Qui fut maréchal de France et généralissime des armées françaises de 1914 à 1916 ? ; Joseph Joffre | Joffre
+Quel écrivain est célèbre pour le récit de son enfance juive sous l'occupation, intitulé 'Un sac de billes' ? ; Joseph Joffo | Joffo
