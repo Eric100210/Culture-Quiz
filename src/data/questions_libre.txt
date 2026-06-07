@@ -304,3 +304,12 @@ Quel pays actuel s'appelait autrefois les Indes orientales néerlandaises ? ; In
 Autre nom de Jacob dans la Bible, et aussi le nom d'un état depuis 1948 ; Israel
 Qui fut maréchal de France et généralissime des armées françaises de 1914 à 1916 ? ; Joseph Joffre | Joffre
 Quel écrivain est célèbre pour le récit de son enfance juive sous l'occupation, intitulé 'Un sac de billes' ? ; Joseph Joffo | Joffo
+Quelle était le prénom de la femme de Charles de Gaulle ? ; Yvonne
+Quel pays a occupé l'Ethiopie entre 1936 et 1941 ? Italie ; L'Ethiopie est un des rares pays d'Afrique qui n'avait jamais été colonisé. En 1935, Mussolini envahit l'Ethiopie sans déclaration de guerre, et y maintient l'occupation jusqu'en 1941.
+Qui est l'épouse du roi Arthur dans les légendes arthuriennes ? ; Guenièvre
+Quel chevalier de la Table Ronde était l'amant secret de la reine Guenièvre ? ; Lancelot ; L'amour de Lancelot et Guenièvre est l'un des grands amours tragiques de la littérature médiévale. Découvert par Mordred, il précipita la chute de Camelot et la guerre finale entre Arthur et Lancelot.
+Quel chevalier, fils de Lancelot, fut le seul à accomplir la quête du Saint Graal ? ; Galaad ; Galaad est le chevalier parfait, sans péché, seul digne de contempler le Graal. Sa pureté s'oppose à celle de son père Lancelot, souillé par son amour adultère pour Guenièvre.
+Quelle enchanteresse piégea Merlin pour l'éternité, après avoir appris tous ses secrets magiques ? ; Viviane ; Viviane, aussi appelée la Dame du Lac, enferma Merlin dans une tour de verre ou un arbre selon les versions. C'est elle aussi qui remit l'épée Excalibur au roi Arthur.
+Quel est le nom de l'épée légendaire de Roland, enchâssée selon la tradition dans la roche de Rocamadour ? ; Durandal ; Selon la légende, Roland lança Durandal depuis les Pyrénées pour qu'elle ne tombe pas aux mains de l'ennemi, et elle s'encastra dans la falaise de Rocamadour. Une épée est effectivement visible dans la roche de la chapelle Notre-Dame.
+De qui Roland était-il le neveu dans la Chanson de Roland ? ; Charlemagne
+Comment s'appelle le cor en ivoire de Roland, qu'il souffla désespérément lors de la bataille de Roncevaux ? ; Olifant ; Roland souffla si fort dans l'Olifant pour appeler Charlemagne à l'aide que ses tempes éclatèrent.
