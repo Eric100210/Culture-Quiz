@@ -121,7 +121,7 @@ Qui commandait les Spartiates lors de la célèbre résistance aux Thermopyles ?
 Quel stratège athénien fut le principal artisan de l'âge d'or d'Athènes au Ve siècle av. J.-C. ? ; Périclès
 Quelle est la première bataille documentée par des sources antiques, opposant Ramsès II aux Hittites ? ; Bataille de Qadesh | Qadesh
 Quel légendaire roi phrygien transformait, selon la mythologie, tout ce qu'il touchait en or ? ; Midas
-Comment s'appelle le père d'Alexandre le Grand ? ; Philippe II
+Comment s'appelle le père d'Alexandre le Grand ? ; Philippe II | Philippe 2
 En quelle année sont sortis les premiers jeux vidéo Pokemon ? ; 1996
 Lequel de ces peintres est l’auteur du célèbre tableau ‘La Jeune Fille à la perle’ ? ; Vermeer
 Quel animal a été le premier être vivant à être envoyé en orbite autour de la Terre ? ; La chienne Laïka | Laïka
@@ -305,7 +305,7 @@ Autre nom de Jacob dans la Bible, et aussi le nom d'un état depuis 1948 ; Israe
 Qui fut maréchal de France et généralissime des armées françaises de 1914 à 1916 ? ; Joseph Joffre | Joffre
 Quel écrivain est célèbre pour le récit de son enfance juive sous l'occupation, intitulé 'Un sac de billes' ? ; Joseph Joffo | Joffo
 Quelle était le prénom de la femme de Charles de Gaulle ? ; Yvonne
-Quel pays a occupé l'Ethiopie entre 1936 et 1941 ? Italie ; L'Ethiopie est un des rares pays d'Afrique qui n'avait jamais été colonisé. En 1935, Mussolini envahit l'Ethiopie sans déclaration de guerre, et y maintient l'occupation jusqu'en 1941.
+Quel pays a occupé l'Ethiopie entre 1936 et 1941 ? ; Italie ; L'Ethiopie est un des rares pays d'Afrique qui n'avait jamais été colonisé. En 1935, Mussolini envahit l'Ethiopie sans déclaration de guerre, et y maintient l'occupation jusqu'en 1941.
 Qui est l'épouse du roi Arthur dans les légendes arthuriennes ? ; Guenièvre
 Quel chevalier de la Table Ronde était l'amant secret de la reine Guenièvre ? ; Lancelot ; L'amour de Lancelot et Guenièvre est l'un des grands amours tragiques de la littérature médiévale. Découvert par Mordred, il précipita la chute de Camelot et la guerre finale entre Arthur et Lancelot.
 Quel chevalier, fils de Lancelot, fut le seul à accomplir la quête du Saint Graal ? ; Galaad ; Galaad est le chevalier parfait, sans péché, seul digne de contempler le Graal. Sa pureté s'oppose à celle de son père Lancelot, souillé par son amour adultère pour Guenièvre.
@@ -332,3 +332,5 @@ Dans les Trois Mousquetaires, sous quel nom est mieux connu le comte Olivier de 
 De quelle province française d'Artagnan est-il originaire dans Les Trois Mousquetaires ? ; La Gascogne ; Le personnage est inspiré d'un mousquetaire réel, Charles de Batz de Castelmore, comte d'Artagnan, né en Gascogne vers 1611 et mort au siège de Maastricht en 1673.
 Quelle redoutable espionne au service du cardinal de Richelieu est l'ennemie des mousquetaires dans Les Trois Mousquetaires ? ; Milady de Winter | Milady ; Milady, marquée au fer rouge d'une fleur de lys sur l'épaule, fut autrefois l'épouse d'Athos. Elle est l'une des grandes figures de méchante de la littérature française.
 Quel oiseau est l'emblème national des États-Unis, figurant sur le Grand Sceau du pays ? ; Le pygargue à tête blanche | Pygargue ; Souvent appelé à tort "aigle à tête blanche" (bald eagle en anglais), le pygargue fut choisi en 1782. Benjamin Franklin aurait préféré le dindon sauvage, qu'il jugeait plus respectable.
+Quel pays est le plus gros producteur mondial de cacao ? ; Côte d'Ivoire
+Qui assassina le roi Henri IV en 1610 ? ; Ravaillac
