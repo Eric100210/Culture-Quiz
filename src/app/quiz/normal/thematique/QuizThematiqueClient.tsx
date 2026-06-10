@@ -43,6 +43,13 @@ function normalize(s: string): string {
     .replace(/\s+/g, " ");
 }
 
+// Digit groups of a string ("le 14 juillet 1789" → "14 1789"). Fuzzy and
+// phonetic matching must never forgive a wrong digit: "1789" vs "1788" is a
+// wrong answer, not a typo.
+function digitsOf(s: string): string {
+  return (s.match(/\d+/g) ?? []).join(" ");
+}
+
 function stripArticle(s: string): string {
   for (const art of FR_ARTICLES) {
     if (s.startsWith(art)) return s.slice(art.length).trimStart();
@@ -121,6 +128,9 @@ function levenshtein(a: string, b: string): number {
  *     skeletons are within Levenshtein ≤ 1, for answers of length ≥ 5.
  *     Catches spelling variants of proper nouns ("Tchaikovsky"/"Chaïkovski").
  *
+ *  Rules 5 and 6 additionally require all digits to match exactly: for a date
+ *  like "1789", typing "1788" is a wrong answer, never a typo.
+ *
  * Returns:
  *  - "exact"    — matched perfectly (incl. article normalisation)
  *  - "article"  — matched only because an article was added/removed
@@ -148,6 +158,11 @@ function validate(input: string, validAnswers: string[]): MatchKind {
     // 4 – Both sides had articles; they still match once stripped
     if (niNoArt === naNoArt && niNoArt !== ni && naNoArt !== na)
       return "article";
+
+    // Tolerant stages (5 and 6) only apply when every digit matches exactly:
+    // for dates and other numbers, a one-character difference is a wrong
+    // answer, not a typo.
+    if (digitsOf(ni) !== digitsOf(na)) continue;
 
     // 5 – Fuzzy (Levenshtein ≤ 1 on raw forms)
     const refLen = Math.min(na.length, naNoArt.length);
