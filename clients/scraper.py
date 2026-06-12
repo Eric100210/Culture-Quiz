@@ -164,13 +164,17 @@ def validate_and_save(questions: list[dict]) -> None:
                     skipped += 1
                     break
                 elif answer == "q":
-                    print(f"\nAborted. {saved} saved, {skipped} skipped, {duplicates} duplicate(s).")
+                    print(
+                        f"\nAborted. {saved} saved, {skipped} skipped, {duplicates} duplicate(s)."
+                    )
                     return
                 else:
                     print("  Please enter Y, n, or q.")
             print()
 
-    print(f"Done — {saved} saved, {skipped} skipped, {duplicates} duplicate(s) → {QUESTIONS_FILE}")
+    print(
+        f"Done — {saved} saved, {skipped} skipped, {duplicates} duplicate(s) → {QUESTIONS_FILE}"
+    )
 
 
 def ask_range() -> tuple[int, int]:

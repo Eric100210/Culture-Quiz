@@ -63,7 +63,7 @@ Avant 1997, à quel pays appartenait la colonie de Hong-Kong ? ; Royaume-Uni | G
 En quelle année la colonie britannique de Hong-Kong est-elle cédée à la Chine ? ; 1997
 En quelle année l'Inde et le Pakistan prennent-ils leur indépendance ? ; 1950
 Où se trouve la région de la Kabylie ? ; Algérie
-Où est né le célèbe auteur Franz Kafka ? ; Prague
+Dans quelle ville est né le célèbe auteur Franz Kafka ? ; Prague
 Qui est l'auteur de La Métamorphose ou encore du Procès ? ; Kafka
 De quel pays Saddam Hussein fut-il le président entre 1979 et 2003 ? ; Irak
 En quelle année meurt Mahomet ? ; 632
@@ -81,8 +81,7 @@ Pour produire quel alcool utilise-t-on la plante appelée l'agave bleue ? ; Tequ
 De quelle plante est issue la tequila ? ; Agave bleue
 Quel est le plus grand os du corps humain ? ; Fémur
 Qui est l'auteur de Frankenstein ou le Prométhée moderne ? ; Mary Shelley | Shelley
-À quoi servaient les tables de Ptolémée ? ; Prévoir les éclipses
-Quel film de Quentin Tarantino imagine une fin alternative à la Seconde Guerre mondiale ? ; Inglourious Basterds
+Quel film de Quentin Tarantino imagine une fin alternative à la Seconde Guerre mondiale ? ; Inglourious Basterds | Inglorious Bastards | Inglorious Basterds | Inglourious Bastards
 Au théâtre, que désigne "côté jardin" vu depuis la salle ? ; Le côté gauche | gauche
 Dans quel James Bond Ursula Andress a-t-elle joué la première James Bond Girl ? ; James Bond contre Dr No | Contre Dr No | James Bond contre Docteur No | Contre Docteur No
 Quel ingénieur a conçu le métro parisien ? ; Fulgence Bienvenüe | Bienvenüe
@@ -211,7 +210,7 @@ Quel est le surnom de la Symphonie n°41 de Mozart, sa dernière symphonie ? ; J
 Qui a composé l'opéra "Rigoletto", inspiré d'une pièce de Victor Hugo ? ; Verdi ; L'opéra est basé sur "Le Roi s'amuse" de Victor Hugo. On y trouve l'air célèbre "La donna è mobile".
 En quelle année Beethoven dirigea-t-il la création de sa Neuvième Symphonie, alors qu'il était totalement sourd ? ; 1824
 Dans quel opéra de Verdi entend-on le choeur "Va, pensiero", surnommé le "choeur des esclaves" ? ; Nabucco ; Ce choeur, représentant les Hébreux en exil à Babylone, devint un symbole du Risorgimento, le mouvement pour l'unification italienne au XIXe siècle.
-Qui a composé la célèbre musique du French Cancan ? ; Offenbach ; Il s'agit du morceau final de l'opéra-bouffe Orphée aux Enfers, composé en 1858.
+Qui a composé l'opéra Orphée aux Enfers, dont le morceeau "le galop infernal" a donné naissance à la musique du "French Cancan" ? ; Offenbach ; Il s'agit du morceau final de l'opéra-bouffe Orphée aux Enfers, composé en 1858.
 Quel est le plus long fleuve d'Europe ? ; Volga ; Le Volga est un fleuve russe, qui mesure 3 530 km et se jette dans la mer Caspienne.
 Quel est le plus petit os du corps humain ? ; L'étrier ; L'étrier est situé dans l'oreille moyenne et mesure environ 3 mm. Il fait partie des trois osselets qui transmettent les vibrations sonores.
 De quelle couleur est le sang des pieuvres et des calmars ? ; Bleu ; Leur sang contient de l'hémocyanine, une molécule à base de cuivre, au lieu de l'hémoglobine à base de fer. Le cuivre donne cette couleur bleue.
