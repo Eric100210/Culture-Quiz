@@ -353,3 +353,31 @@ De quelle province française d'Artagnan est-il originaire dans Les Trois Mousqu
 Quel oiseau est l'emblème national des États-Unis, figurant sur le Grand Sceau du pays ? ; L'aigle royal ; Le condor de Californie ; Le faucon pèlerin ; Le pygargue à tête blanche ; Le pygargue à tête blanche ; Souvent appelé à tort "aigle à tête blanche" (bald eagle en anglais), le pygargue fut choisi en 1782.
 Quel pays est le plus gros producteur mondial de cacao ? ; Côte d'Ivoire ; Brésil ; Colombie ; Equateur ; Côte d'Ivoire
 Lequel de ces personnages historiques n'est pas mort assassiné ? ; Che Guevara ; Abraham Lincoln ; Fidel Castro ; Cicéron ; Fidel Castro
+Quel pays s'appelait Ceylan avant de changer de nom en 1972 ? ; Sri Lanka ; Bhoutan ; Laos ; Birmanie ; Sri Lanka
+Dans quel pays la langue zouloue est-elle principalement parlée ? ; Nigeria ; Afrique du Sud ; Kenya ; Éthiopie ; Afrique du Sud
+De quel pays le khmer est-il la langue officielle ? ; Laos ; Thaïlande ; Cambodge ; Vietnam ; Cambodge ; Le khmer est parlé par près de 90% de la population au Cambodge.
+Quel système d'écriture détient le record du plus grand nombre de lettres selon le Guinness ? ; Le thaï ; Le birman ; Le tibétain ; Le khmer ; Le khmer ; L'alphabet khmer compte 74 caractères. C'est un alphasyllabaire (abugida) dérivé de l'écriture indienne brahmi.
+De quel pays le maori est-il la langue autochtone ? ; Australie ; Nouvelle-Zélande ; Fidji ; Samoa ; Nouvelle-Zélande
+Comment s'appelle la danse rituelle maorie rendue célèbre par les rugbymen des All Blacks ? ; Le sirtaki ; Le hula ; Le haka ; Le tango ; Le haka
+Quel célèbre souverain d'origine kurde reprit Jérusalem aux croisés en 1187 ? ; Baybars ; Saladin ; Soliman le Magnifique ; Tamerlan ; Saladin ; Fondateur de la dynastie ayyoubide, Saladin (Salah ad-Din) reprend Jérusalem aux croisés en 1187, entraînant la Troisième Croisade, menée notamment par Richard Coeur de Lion.
+Les Coptes sont les chrétiens originaires de quel pays ? ; Le Liban ; L'Arménie ; L'Égypte ; L'Éthiopie ; L'Égypte
+Quel évangéliste est traditionnellement considéré comme le fondateur de l'Église copte d'Alexandrie ? ; Saint Marc ; Saint Pierre ; Saint Paul ; Saint Jean ; Saint Marc
+Quel concile de 451 provoqua le schisme isolant l'Église copte ? ; Le concile de Nicée ; Le concile de Chalcédoine ; Le concile de Trente ; Le concile de Vatican II ; Le concile de Chalcédoine ; Le concile de Chalcédoine affirma que le Christ possède deux natures, divine et humaine, unies en une seule personne. Les Coptes, comme les Arméniens et les Éthiopiens, refusèrent cette définition et professèrent une nature unique à la fois divine et humaine : on les dit "miaphysites". Ce désaccord, autant théologique que politique face à l'autorité de Constantinople, sépara durablement l'Église copte des Églises catholique et orthodoxe.
+Quel général romain vainquit Hannibal à la bataille de Zama en 202 av. J.-C. ? ; Jules César ; Pompée ; Scipion l'Africain ; Marius ; Scipion l'Africain
+Lors de quelle bataille navale de 31 av. J.-C. Octave vainquit-il Marc Antoine et Cléopâtre ? ; Salamine ; Actium ; Lépante ; Trafalgar ; Actium
+Quel empereur byzantin fit codifier le droit romain et édifier Sainte-Sophie au VIe siècle ? ; Constantin ; Justinien ; Héraclius ; Basile II ; Justinien
+Quel traité de 843 partagea l'empire de Charlemagne entre ses petits-fils ? ; Le traité de Verdun ; Le traité de Westphalie ; Le traité de Tordesillas ; Le traité d'Aix-la-Chapelle ; Le traité de Verdun
+Quel traité de 1494 partagea le Nouveau Monde entre l'Espagne et le Portugal ? ; Le traité de Tordesillas ; Le traité de Versailles ; Le traité d'Utrecht ; Le traité de Westphalie ; Le traité de Tordesillas
+Quels traités de 1648 mirent fin à la guerre de Trente Ans ? ; Les traités de Westphalie ; Le traité d'Utrecht ; Le congrès de Vienne ; Le traité des Pyrénées ; Les traités de Westphalie
+Quel roi fonda et dirigea un puissant empire zoulou en Afrique australe au début du XIXe siècle ? ; Chaka ; Lobengula ; Mansa Moussa ; Béhanzin ; Chaka
+Quel empereur japonais donna son nom à l'ère qui modernisa le Japon à partir de 1868 ? ; Hirohito ; Meiji ; Taisho ; Showa ; Meiji
+Quel empereur indien du IIIe siècle av. J.-C. se convertit au bouddhisme après la sanglante guerre du Kalinga ? ; Akbar ; Ashoka ; Babur ; Tamerlan ; Ashoka
+Quel nom de code portait l'opération du débarquement allié en Normandie le 6 juin 1944 ? ; Barbarossa ; Overlord ; Torch ; Market Garden ; Overlord
+Quel ensemble de textes constitue les écritures sacrées les plus anciennes de l'hindouisme ? ; Les Védas ; Le Talmud ; L'Avesta ; Le Coran ; Les Védas
+Quelle religion fut fondée par Guru Nanak au XVe siècle dans le Pendjab ? ; Le jaïnisme ; Le sikhisme ; Le bouddhisme ; Le zoroastrisme ; Le sikhisme
+Quel est le nom du marteau du dieu Thor ? ; Gungnir ; Mjöllnir ; Gram ; Andvaranaut ; Mjöllnir
+Comment appelle-t-on la bataille apocalyptique de la fin du monde dans la mythologie nordique ? ; Le Ragnarök ; L'Armageddon ; Le Yggdrasil ; Le Valhalla ; Le Ragnarök
+Quel dieu égyptien, tué par son frère Seth, règne sur le royaume des morts ? ; Râ ; Osiris ; Horus ; Thot ; Osiris
+Quel philosophe grec fut le précepteur d'Alexandre le Grand ? ; Platon ; Aristote ; Socrate ; Diogène ; Aristote
+Quel est le seul métal liquide à température ambiante ? ; Le plomb ; Le mercure ; L'étain ; Le zinc ; Le mercure
+Quel fromage italien entre dans la recette traditionnelle du tiramisu ? ; La ricotta ; Le mascarpone ; La mozzarella ; Le parmesan ; Le mascarpone
